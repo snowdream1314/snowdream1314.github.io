@@ -44,7 +44,7 @@ icon: glyphicon-heart
 
 这个博客主要用于记录我的人生轨迹：包括技术的增长，生活的点滴，去过的远方。。。
 
-2015.7.23  | 用[HYG](http://gaohaoyang.github.io/)的模板做了自己的博客。
+2015.7.23  | 用[Gaohaoyang](http://gaohaoyang.github.io/)的模板做了自己的博客。
 2015.5-7   | 辞职，打算转IT行业，当一名程序员，开始自学找工作之旅。先后学了python，Git，爬虫，用Flask搭建博客网站等。
 
 
