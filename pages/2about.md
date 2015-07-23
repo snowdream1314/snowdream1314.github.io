@@ -48,7 +48,7 @@ icon: glyphicon-heart
 2015.5-7   | 辞职，打算转IT行业，当一名程序员，开始自学找工作之旅。先后学了python，Git，爬虫，用Flask搭建博客网站等。
 
 
- > * 参考书主要有[《Python核心编程》](http://item.jd.com/10062788.html)、[《Flask Web开发：基于Python的Web应用开发实战》](http://item.jd.com/11594082.html)
+ > * 参考书主要有[《Python核心编程》](http://item.jd.com/10062788.html)、[《Flask Web开发：基于Python的Web应用开发实战》](http://item.jd.com/11594082.html)等
 >
  > * 参考网站主要有[知乎](http://www.zhihu.com/)、[开源中国](http://www.oschina.net/)、[笨办法学 Python](http://www.2cto.com/shouce/Pythonbbf/index.html)、[廖雪峰的官方网站](http://www.liaoxuefeng.com/)、[W3School](http://www.w3school.com.cn/h.asp)等 
 >
