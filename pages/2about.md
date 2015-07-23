@@ -44,9 +44,12 @@ icon: glyphicon-heart
 
 这个博客主要用于记录我的人生轨迹：包括技术的增长，生活的点滴，去过的远方。。。
 
-2015.7.23 | 用[HYG](http://gaohaoyang.github.io/)的模板做了自己的博客。
-2015.5-7  | 辞职，打算转IT行业，当一名程序员，开始自学找工作之旅。先后学了python，Git，爬虫，用Flask搭建博客网站等。
-参考书主要有[《Python核心编程》](http://item.jd.com/10062788.html)、[《Flask Web开发：基于Python的Web应用开发实战》](http://item.jd.com/11594082.html)
-参考网站主要有[知乎](http://www.zhihu.com/)、[开源中国](http://www.oschina.net/)、[笨办法学 Python](http://www.2cto.com/shouce/Pythonbbf/index.html)、[廖雪峰的官方网站](http://www.liaoxuefeng.com/)、[W3School](http://www.w3school.com.cn/h.asp)等 
+* 2015.7.23  用[HYG](http://gaohaoyang.github.io/)的模板做了自己的博客。
+* 2015.5-7  | 辞职，打算转IT行业，当一名程序员，开始自学找工作之旅。先后学了python，Git，爬虫，用Flask搭建博客网站等。
 
+ > 附：
+ > * 参考书主要有[《Python核心编程》](http://item.jd.com/10062788.html)、[《Flask Web开发：基于Python的Web应用开发实战》](http://item.jd.com/11594082.html)
+>
+ > * 参考网站主要有[知乎](http://www.zhihu.com/)、[开源中国](http://www.oschina.net/)、[笨办法学 Python](http://www.2cto.com/shouce/Pythonbbf/index.html)、[廖雪峰的官方网站](http://www.liaoxuefeng.com/)、[W3School](http://www.w3school.com.cn/h.asp)等 
+>
 ---
