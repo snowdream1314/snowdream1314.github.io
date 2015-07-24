@@ -1,11 +1,11 @@
 ---
 layout: page
-title: 
+title: 你好，IT世界
 permalink: /about/
 icon: glyphicon-heart
 ---
 
-> 2015年我将进入IT行业，做一名程序员。   
+> 2015年我最大的目标是进入IT行业，做一名程序员。   
 
 2013年毕业于浙江工业大学。经过2年工作摸索，终于找到自己的职业方向，已经自学Python3个月，正在找工作，即将加入挨踢（IT）行列！   
 
