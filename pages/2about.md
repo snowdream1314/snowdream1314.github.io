@@ -9,7 +9,7 @@ icon: glyphicon-heart
 
 > 2015年我将进入IT行业，做一名程序员。Small Small Programmer,Big Big Dream！   
 
-毕业于浙江工业大学机电一体化专业。经过2年工作摸索，终于找到自己的职业方向，已经自学3个月，正在找工作，即将加入挨踢（IT）行列！   
+毕业于浙江工业大学机电一体化专业。经过2年工作摸索，终于找到自己的职业方向，已经自学Python3个月，正在找工作，即将加入挨踢（IT）行列！   
 
 对于智能家居、人工智能、机器学习和大数据很感兴趣。算法的重要性深入我心。   
 
@@ -43,13 +43,65 @@ icon: glyphicon-heart
 ### 关于本站   
 
 这个博客主要用于记录我的人生轨迹：包括技术的增长，生活的点滴，去过的远方。。。
-
 2015.7.23  | 用[Gaohaoyang](http://gaohaoyang.github.io/)的模板做了自己的博客。
 2015.5-7   | 辞职，打算转IT行业，当一名程序员，开始自学找工作之旅。先后学了python，Git，爬虫，用Flask搭建博客网站等。
 
 
- > * 参考书主要有[《Python核心编程》](http://item.jd.com/10062788.html)、[《Flask Web开发：基于Python的Web应用开发实战》](http://item.jd.com/11594082.html)等
->
- > * 参考网站主要有[知乎](http://www.zhihu.com/)、[开源中国](http://www.oschina.net/)、[笨办法学 Python](http://www.2cto.com/shouce/Pythonbbf/index.html)、[廖雪峰的官方网站](http://www.liaoxuefeng.com/)、[W3School](http://www.w3school.com.cn/h.asp)等 
->
+> * 参考书主要有[《Python核心编程》](http://item.jd.com/10062788.html)、[《Flask Web开发：基于Python的Web应用开发实战》](http://item.jd.com/11594082.html)等
+> * 参考网站主要有[知乎](http://www.zhihu.com/)、[开源中国](http://www.oschina.net/)、[笨办法学 Python](http://www.2cto.com/shouce/Pythonbbf/index.html)、[廖雪峰的官方网站](http://www.liaoxuefeng.com/)、[W3School](http://www.w3school.com.cn/h.asp)等 
 ---
+#我的简历
+
+## 联系方式
+
+- 手机：18758554386 
+- Email：595968602@qq.com 
+
+---
+
+## 个人信息
+
+ - 徐晓庆/男/1990 
+ - 本科/浙江工业大学 
+ - 工作年限：2年
+ - 技术博客：http://snowdream1314.github.io
+ - Github  : http://github.com/snowdream1314
+
+ - 期望职位：python程序员
+ - 期望城市：杭州、上海
+
+---
+
+##个人评价
+
+ >为人踏实诚恳，做事勤快。对人工智能有浓厚的兴趣，喜欢软件开发工作。
+
+ > 了解Python语言和Flask框架，用Flask、Werkzeug、Jinjia2和Flask-SQLAlchemy等搭建了一个博客程序；
+>
+ > 了解re、urllib2、threading，Queue等几个模块，分别用正则表达式分析和Scrapy写过爬虫程序；
+>
+ > 会用git管理代码；
+>
+ > 了解基本的前端技术：HTML、CSS等；
+>   
+ > 具备Linux的常用操作和基本知识，用过一段时间的ubuntu系统；
+> 
+---
+
+## 工作经历
+
+### 浙江达峰科技有限公司 （ 2014年4月 ~ 2015年4月 ）
+
+#### 研发部硬件工程师 
+主要负责产品从原理图修改到量产的整个环节技术工作。包括原理图修改、PCB布线、焊接装样调试、生产流水线跟线以及从项目立项到批量结束的文档资料的整理归档。在职期间共完成4个OEM项目，2个ODM项目，客户反馈满意。
+
+ 
+### 汉鼎信息科技股份有限公司 （ 2013年4月 ~ 2014年3月 ）
+
+#### 工程部弱电项目经理 
+负责现场智能化施工的协调和管理，整理项目资料等。在职期间共负责过2个项目，和同事一起保证了项目地顺利进行。
+
+---
+
+### 致谢
+感谢您花时间阅读我的简历，期待能有机会和您共事。
