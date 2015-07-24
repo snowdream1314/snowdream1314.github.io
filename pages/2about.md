@@ -79,6 +79,8 @@ Small Small Programmer,Big Big Dream！
 
 ####知识储备
 
+---
+
  > 了解Python语言和Flask框架，用Flask、Werkzeug、Jinjia2和Flask-SQLAlchemy等搭建了一个博客程序；
 > 
  > 了解re、urllib2、threading，Queue等几个模块，分别用正则表达式分析和Scrapy写过爬虫程序；
@@ -93,6 +95,8 @@ Small Small Programmer,Big Big Dream！
 ---
 
 #### 工作经历
+
+---
 
 ##### **浙江达峰科技有限公司 （ 2014年4月 ~ 2015年4月 ）**
 
