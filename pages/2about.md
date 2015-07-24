@@ -9,7 +9,7 @@ icon: glyphicon-heart
 
 > 2015年我将进入IT行业，做一名程序员。   
 
-2013年毕业于浙江工业大学机电一体化专业。经过2年工作摸索，终于找到自己的职业方向，已经自学Python3个月，正在找工作，即将加入挨踢（IT）行列！   
+2013年毕业于浙江工业大学。经过2年工作摸索，终于找到自己的职业方向，已经自学Python3个月，正在找工作，即将加入挨踢（IT）行列！   
 
 对于智能家居、人工智能、机器学习和大数据很感兴趣。算法的重要性深入我心。   
 
@@ -20,14 +20,6 @@ icon: glyphicon-heart
 喜欢看书，视野决定看问题角度。 
  
 Small Small Programmer,Big Big Dream！
-
----
-
-### 联系我
-
-* GitHub: [Xuxiaoqing](http://github.com/snowdream1314)
-* email：[595968602@qq.com](mailto:{{ site.email }})
-* 知乎：[Xuxiaoqing](http://www.zhihu.com/people/snowdream-54)
 
 ---
 
@@ -42,6 +34,18 @@ Small Small Programmer,Big Big Dream！
 
 ---
 
+###今年书单
+
+>* 《Python核心编程（第2版）（Core PYTHON Programming）》（[美] 丘恩（Chun W.J.） 著；宋吉广 译）
+>* 《Flask Web开发：基于Python的Web应用开发实战》（[美] 格林布戈（Miguel Grinberg） 著；安道 译）
+* **《SQL必知必会 第4版》（[美] Ben Forta 著；钟鸣，刘晓霞 译）**
+* 《啊哈 算法》（啊哈磊 著）
+* 《大话数据结构》（程杰 著）
+* 《数学之美（第二版）》（吴军 著）
+* 待增加
+
+---
+
 ##我的简历
 
 ---
@@ -52,6 +56,7 @@ Small Small Programmer,Big Big Dream！
  - 本科/浙江工业大学 
  
  - 手    机 ：18758554386
+ - Email    : 595968602@qq.com
  - Github   : http://github.com/snowdream1314 
  - 技术博客 ：http://snowdream1314.github.io
  - 期望职位 ：python程序员
@@ -79,7 +84,7 @@ Small Small Programmer,Big Big Dream！
 
 ####浙江达峰科技有限公司 （ 2014年4月 ~ 2015年4月 ）
 
-** 研发部硬件工程师 **
+##### 研发部硬件工程师 
 - 主要负责产品从原理图修改到量产的整个环节技术工作。
 - 包括原理图修改、PCB布线、焊接装样调试、生产流水线跟线以及从项目立项到批量结束的文档资料的整理归档。
 - 在职期间共完成4个OEM项目，2个ODM项目，通过客户验收。
@@ -87,7 +92,7 @@ Small Small Programmer,Big Big Dream！
  
 ####汉鼎信息科技股份有限公司 （ 2013年4月 ~ 2014年3月 ）
 
-** 工程部弱电项目经理 **
+##### 工程部弱电项目经理 
 - 负责现场智能化施工的协调和管理，整理项目资料等。
 - 在职期间共负责过2个项目，和同事一起保证了项目地顺利进行。
 
