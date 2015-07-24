@@ -5,7 +5,8 @@ permalink: /about/
 icon: glyphicon-heart
 ---
 
-![me]({{ "/css/pics/me.png" }})   
+![me]({{ "/css/pics/me2.png" }})   
+
 
 ---
 
@@ -33,6 +34,7 @@ Small Small Programmer,Big Big Dream！
 * 恶补计算机专业知识，先从数据结构和算法开始
 * 关注Github上的优秀源码
 * 做出属于自己的博客，更新博客，包括学习笔记，工作心得，随感随想，明年计划等
+* 待更新
 
 ---
 
@@ -47,7 +49,7 @@ Small Small Programmer,Big Big Dream！
 * 《啊哈 算法》（啊哈磊 著）
 * 《大话数据结构》（程杰 著）
 * 《数学之美（第二版）》（吴军 著）
-*  待增加
+*  待更新
 
 ---
 
