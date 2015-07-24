@@ -58,6 +58,7 @@ Small Small Programmer,Big Big Dream！
  - Email    : 595968602@qq.com
  - Github   : http://github.com/snowdream1314 
  - 技术博客 ：http://snowdream1314.github.io
+ 
  - 期望职位 ：python程序员
  - 期望城市 ：杭州、上海
 
@@ -81,6 +82,7 @@ Small Small Programmer,Big Big Dream！
 > 
  > 具备Linux的常用操作和基本知识，用过一段时间的ubuntu系统；
 > 
+
 ---
 
 #### 工作经历
