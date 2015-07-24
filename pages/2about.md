@@ -45,6 +45,7 @@ Small Small Programmer,Big Big Dream！
 
 ###我的简历
 
+---
 
 ![me]({{ "/css/pics/me.png" }})   
 
