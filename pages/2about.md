@@ -6,8 +6,6 @@ icon: glyphicon-heart
 ---
 
 ![me]({{ "/css/pics/me2.png" }})   
-
-
 ---
 
 > 2015年我最大的目标是进入IT行业，做一名程序员。   
@@ -28,8 +26,6 @@ Small Small Programmer,Big Big Dream！
 
 ####今年目标
 
----
-
 * 找到一份用python语言的工作，可以是爬虫类的，也可以是网站后台类的，努力工作深入学习python
 * 恶补计算机专业知识，先从数据结构和算法开始
 * 关注Github上的优秀源码
@@ -38,28 +34,11 @@ Small Small Programmer,Big Big Dream！
 
 ---
 
-####今年书单
-
----
-
->* 《Python核心编程（第2版）（Core PYTHON Programming）》（[美] 丘恩（Chun W.J.） 著；宋吉广 译）
->* 《Flask Web开发：基于Python的Web应用开发实战》（[美] 格林布戈（Miguel Grinberg） 著；安道 译）
-
-* **《SQL必知必会 第4版》（[美] Ben Forta 著；钟鸣，刘晓霞 译）**
-* 《啊哈 算法》（啊哈磊 著）
-* 《大话数据结构》（程杰 著）
-* 《数学之美（第二版）》（吴军 著）
-*  待更新
-
----
-
 ###我的简历
 
 ---
 
 ###个人信息
-
----
 
  - 徐晓庆/男/1990 
  - 本科/浙江工业大学 
@@ -76,10 +55,21 @@ Small Small Programmer,Big Big Dream！
 
 ####个人评价
 
----
-
  >为人踏实诚恳，做事勤快。对人工智能、网站开发、大数据有浓厚的兴趣，喜欢软件开发工作。
 >
+
+---
+
+####今年书单
+
+>* 《Python核心编程（第2版）（Core PYTHON Programming）》（[美] 丘恩（Chun W.J.） 著；宋吉广 译）
+>* 《Flask Web开发：基于Python的Web应用开发实战》（[美] 格林布戈（Miguel Grinberg） 著；安道 译）
+
+* **《SQL必知必会 第4版》（[美] Ben Forta 著；钟鸣，刘晓霞 译）**
+* 《啊哈 算法》（啊哈磊 著）
+* 《大话数据结构》（程杰 著）
+* 《数学之美（第二版）》（吴军 著）
+*  待更新
 
 ---
 
