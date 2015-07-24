@@ -45,10 +45,7 @@ Small Small Programmer,Big Big Dream！
 
 ###我的简历
 
-![me]({{ "/css/pics/me.png" }})     |   - 徐晓庆/男/1990      |   - 本科/浙江工业大学 
- 
-                                    | 手    机 ：18758554386
-                                    | Email    : 595968602@qq.com
+![me]({{ "/css/pics/me.png" }})     |   - 徐晓庆/男/1990                |   - 本科/浙江工业大学             | 手    机 ：18758554386       | Email    : 595968602@qq.com
                                     |- Github   : http://github.com/snowdream1314 
                                     |- 技术博客 ：http://snowdream1314.github.io
                                     |- 期望职位 ：python程序员
