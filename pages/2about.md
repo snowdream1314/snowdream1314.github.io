@@ -73,13 +73,14 @@ Small Small Programmer,Big Big Dream！
 
  > 了解Python语言和Flask框架，用Flask、Werkzeug、Jinjia2和Flask-SQLAlchemy等搭建了一个博客程序；
  
- > 了解re、urllib2、threading，Queue等几个模块，分别用正则表达式分析和Scrapy写过爬虫程序；
+  了解re、urllib2、threading，Queue等几个模块，分别用正则表达式分析和Scrapy写过爬虫程序；
  
- > 会用git管理代码；
+  会用git管理代码；
  
- > 了解基本的前端技术：HTML、CSS等； 
+  了解基本的前端技术：HTML、CSS等； 
  
- > 具备Linux的常用操作和基本知识，用过一段时间的ubuntu系统；
+  具备Linux的常用操作和基本知识，用过一段时间的ubuntu系统；
+> 
 ---
 
 #### 工作经历
