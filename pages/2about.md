@@ -53,6 +53,8 @@ Small Small Programmer,Big Big Dream！
 
 ###个人信息
 
+---
+
  - 徐晓庆/男/1990 
  - 本科/浙江工业大学 
  
@@ -68,8 +70,11 @@ Small Small Programmer,Big Big Dream！
 
 ####个人评价
 
+---
+
  >为人踏实诚恳，做事勤快。对人工智能、网站开发、大数据有浓厚的兴趣，喜欢软件开发工作。
 >
+
 ---
 
 ####知识储备
