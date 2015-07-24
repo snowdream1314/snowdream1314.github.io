@@ -5,6 +5,10 @@ permalink: /about/
 icon: glyphicon-heart
 ---
 
+![me]({{ "/css/pics/me.png" }})   
+
+---
+
 > 2015年我最大的目标是进入IT行业，做一名程序员。   
 
 2013年毕业于浙江工业大学。经过2年工作摸索，终于找到自己的职业方向。我已经自学Python3个月，目前正在努力找工作，奔向挨踢（IT）行列！   
@@ -23,6 +27,8 @@ Small Small Programmer,Big Big Dream！
 
 ####今年目标
 
+---
+
 * 找到一份用python语言的工作，可以是爬虫类的，也可以是网站后台类的，努力工作深入学习python
 * 恶补计算机专业知识，先从数据结构和算法开始
 * 关注Github上的优秀源码
@@ -31,6 +37,8 @@ Small Small Programmer,Big Big Dream！
 ---
 
 ####今年书单
+
+---
 
 >* 《Python核心编程（第2版）（Core PYTHON Programming）》（[美] 丘恩（Chun W.J.） 著；宋吉广 译）
 >* 《Flask Web开发：基于Python的Web应用开发实战》（[美] 格林布戈（Miguel Grinberg） 著；安道 译）
@@ -44,10 +52,6 @@ Small Small Programmer,Big Big Dream！
 ---
 
 ###我的简历
-
----
-
-![me]({{ "/css/pics/me.png" }})   
 
 ---
 
