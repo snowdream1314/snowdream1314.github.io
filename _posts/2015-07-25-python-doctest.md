@@ -13,39 +13,41 @@ excerpt:
 ### 今天看到一个关于贪心算法的帖子，学习一下
 
 * 代码：
-    #-*-coding:utf-8-*-
+        #-*-coding:utf-8-*-
 
-    def sameSums(int_list):
-        """
-        >>> sameSums([4, 7, 6, 3])
-        True
-        >>> sameSums([3, 3])
-        True
-        >>> sameSums([4, 12, 16])
-        True
-        >>> sameSums([5, 1])
-        True
-        """
-        new_lst = sorted(int_list, reverse=True)
-        list1 = list()
-        list2 = list()
-        for n in new_lst:
-            if sum(list1) < sum(list2):
-                list1.append(n)
-            else:
-                list2.append(n)
-        return sum(list1) == sum(list2)
-     
-    if __name__ == "__main__":
-        import doctest
-        doctest.testmod()
-        lst = [3, 9, 10, 30, 8]
-        print sameSums(lst)
+        def sameSums(int_list):
+            """
+            >>> sameSums([4, 7, 6, 3])
+            True
+            >>> sameSums([3, 3])
+            True
+            >>> sameSums([4, 12, 16])
+            True
+            >>> sameSums([5, 1])
+            True
+            """
+            new_lst = sorted(int_list, reverse=True)
+            list1 = list()
+            list2 = list()
+            for n in new_lst:
+                if sum(list1) < sum(list2):
+                    list1.append(n)
+                else:
+                    list2.append(n)
+            return sum(list1) == sum(list2)
+         
+        if __name__ == "__main__":
+            import doctest
+            doctest.testmod()
+            lst = [3, 9, 10, 30, 8]
+            print sameSums(lst)
 
 ---
 
 ####学习点：
+---
 ##### sorted函数用法：
+
 > * sorted 函数用来对给定的List进行排序，它有四个可选参数，这里就介绍参数reverse，它决定排序规则：True降序，False升序
 
 ##### 简单的贪心算法：
@@ -62,24 +64,27 @@ excerpt:
 
 >doctest的测试用例就像文档字符串一样，这句话的内涵在于：测试用例的位置必须放在整个模块文件的开头，或者紧接着对象声明语句的下一行。也就是可以被 __doc__ 这个属性引用到的地方。并非像普通注释一样写在哪里都可以。另：verbose 参数用于控制是否输出详细信息，默认为 False，如果不写，那么运行时不会输出任何东西，除非测试 fail。
 
-*上例中启动测试的方式是在 __main__ 函数里调用了 doctest.testmod() 函数。对于__main__函数另有他用的情况，则还可以通过命令行来启动测试：
-    python -m doctest XXX.py
-    python -m doctest -v XXX.py
-    （XXX为文件名）
-    其中 -m 表示引用一个模块，-v 等价于 verbose=True。
+* 上例中启动测试的方式是在 __main__ 函数里调用了 doctest.testmod() 函数。对于__main__函数另有他用的情况，则还可以通过命令行来启动测试：
+
+        python -m doctest XXX.py
+        python -m doctest -v XXX.py
+        （XXX为文件名）
+        其中 -m 表示引用一个模块，-v 等价于 verbose=True。
 
 * 独立文件模式：
+
 > * 直接把测试用例写在一个独立的文本文件里，如 ** example.txt **，运行方法：
-    Python shell 里：
-    >>> import doctest
-    >>> doctest.testfile('example.txt')
-    
-    或者在系统 shell 里：
-    python -m doctest -v example.txt
+
+        Python shell 里：
+        >>> import doctest
+        >>> doctest.testfile('example.txt')
+        
+        或者在系统 shell 里：
+        python -m doctest -v example.txt
 
 ---
 
-####参考文章：[如何捅破python编程的那层纸之二](http://www.oschina.net/code/snippet_1448389_49635)  、[Python 各种测试框架简介] (http://my.oschina.net/lionets/blog/268542)
+> 参考文章：[如何捅破python编程的那层纸之二](http://www.oschina.net/code/snippet_1448389_49635) 、[Python 各种测试框架简介](http://my.oschina.net/lionets/blog/268542)
 
 ---
 
