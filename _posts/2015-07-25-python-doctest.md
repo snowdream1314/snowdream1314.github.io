@@ -45,6 +45,7 @@ excerpt:
 ---
 
 ####学习点：
+
 ---
 ##### sorted函数用法：
 
@@ -73,7 +74,7 @@ excerpt:
 
 * 独立文件模式：
 
-> * 直接把测试用例写在一个独立的文本文件里，如 ** example.txt **，运行方法：
+> * 直接把测试用例写在一个独立的文本文件里，如 **example.txt**，运行方法：
 
         Python shell 里：
         >>> import doctest
