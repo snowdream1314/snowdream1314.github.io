@@ -45,10 +45,9 @@ excerpt:
                 return False
             all_subset = get_all_subset(int_list)
             for item in all_subset:
-                if sum(item) == sub_sum:#判断子集是不是和 sub_sum相等，如果相等则可以拆分为2个和相等的list，
-         否则不可以
-                    return True
-            return False
+                if sum(item) == sub_sum:#判断子集是不是和 sub_sum相等         
+                    return True     #如果相等则可以拆分为2个和相等的list
+            return False    #否则不可以
          
         if __name__ == "__main__":
             import doctest
