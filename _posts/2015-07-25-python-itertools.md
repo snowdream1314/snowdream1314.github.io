@@ -41,11 +41,12 @@ excerpt:
             """
             sum_of_lsit = sum(int_list)
             sub_sum = sum_of_lsit / 2
-            if sum_of_lsit % 2:
+            if sum_of_lsit % 2:#如果sum(list) 是奇数，就不能将list拆分为2个和相等的list
                 return False
             all_subset = get_all_subset(int_list)
             for item in all_subset:
-                if sum(item) == sub_sum:
+                if sum(item) == sub_sum:#判断子集是不是和 sub_sum相等，如果相等则可以拆分为2个和相等的list，
+         否则不可以
                     return True
             return False
          
@@ -80,7 +81,7 @@ excerpt:
         #[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
     
 
-##### set函数set()函数返回列表中不同的元素组成的集合（Python 集合不允许重复）
+> set()函数返回列表中不同的元素组成的集合（Python 集合不允许重复）
 
 > doctest模块参见[Python测试之doctest模块](http://snowdream1314.github.io/2015/07/25/python-doctest/)
 
