@@ -78,7 +78,7 @@ excerpt:
             
 * 这样这个脚本就可以直接运行：
 
-        python test_um_test.py
+        python test_app_test.py
         ..
         --------------------------------------
         Ran 2 tests in 0.01s
