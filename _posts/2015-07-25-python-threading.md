@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python之threading模块"
-date:   2015-07-26 12:30:05
+date:   2015-07-26 21:20:05
 categories: python
 excerpt: 
 ---
@@ -42,8 +42,8 @@ excerpt:
             print('thread %s ended.' % threading.current_thread().name)
 
         print('thread %s is running...' % threading.current_thread().name)
-        t = threading.Thread(target=loop, name='LoopThread')#target为要运行的函数，args为函数的参数，name为线程的名字
-        t.start()
+        t = threading.Thread(target=loop, name='LoopThread')
+        t.start()   #target为要运行的函数，args为函数的参数，name为线程的名字
         t.join()#等到线程结束
         print('thread %s ended.' % threading.current_thread().name
 
