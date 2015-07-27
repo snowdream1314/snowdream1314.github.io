@@ -16,16 +16,16 @@ excerpt:
 
 ####设置Headers
             
-            import urllib,urllib2
+        import urllib,urllib2
             
-            url = 'http://www.zhihu.com/#signin'
-            values = {'username':'abc', 'password':'123456'}
-            user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'  (可以在浏览器调试工具中获得)
-            headers = {'User-Agent':user_agent}
-            data = urllib.urlencode(values)
-            request = urllib2.Request(url, data, headers)
-            response = urllib2.urlopen(request)
-            page = response.read()
+        url = 'http://www.zhihu.com/#signin'
+        values = {'username':'abc', 'password':'123456'}
+        user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'  (可以在浏览器调试工具中获得)
+        headers = {'User-Agent':user_agent}
+        data = urllib.urlencode(values)
+        request = urllib2.Request(url, data, headers)
+        response = urllib2.urlopen(request)
+        page = response.read()
 
 ---
 
