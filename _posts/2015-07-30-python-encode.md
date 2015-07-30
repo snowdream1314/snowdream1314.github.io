@@ -48,6 +48,12 @@ excerpt:
         
 ---        
 
+####去除字符串中的空格、换行符(\n)、tab(\t)、新行(\r)
+
+        str..replace("\n","").replace("\r","").replace("\t","").replace(" ","")
+
+---
+
 > 参考文章：
 
 ---
