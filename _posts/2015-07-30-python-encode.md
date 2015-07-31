@@ -18,7 +18,7 @@ excerpt:
 
 > * 方法是是把list或dict转化成josn格式的字符串输出
             
-        import urllib,urllib2,json
+        import urllib,urllib2,json,codecs
         from bs4 import BeautifulSoup  
             
         url = 'http://www.idianhui.com/invest/detail.html?borrowid=11'
@@ -34,17 +34,18 @@ excerpt:
         a = {}
         b = []
         title = soup.find('h1').get_text()
-        a['title'] =title
+        a['title'] =title   #中文标题
         
-        b.append(json.dumps(a,indent=4,ensure_ascii=False))
+        b.append(a)     #存入list
         
         fileName ='invest.txt'
         f = open(fileName,'w+')
         
-        for item in b :
-            item = item.encode('utf-8')
-            f.write(item)
-        f.close()
+        #模块codecs提供了一个open()方法，可以指定一个编码打开文件，使用这个方法打开的文件读取返回的将是unicode。有中文时会先将GBK编码的str解码为unicode再编码为UTF-8写入
+        with codecs.open(filename, 'w+', 'utf-8') as f:
+            f.write(json.dumps(a,indent=4,sort_keys=True,ensure_ascii=False))
+            f.close()
+        
         
 ---        
 
