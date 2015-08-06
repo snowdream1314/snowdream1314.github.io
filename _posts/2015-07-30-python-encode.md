@@ -52,6 +52,18 @@ excerpt:
 ####去除字符串中的空格、换行符(\n)、tab(\t)、新行(\r)
 
         str..replace("\n","").replace("\r","").replace("\t","").replace(" ","")
+        
+* strip()函数可以删除对象中特定的字符，包括空格：
+
+        声明：s为字符串，rm为要删除的字符序列
+        s.strip(rm)        删除s字符串中开头、结尾处，位于 rm删除序列的字符
+        s.lstrip(rm)       删除s字符串中开头处，位于 rm删除序列的字符
+        s.rstrip(rm)      删除s字符串中结尾处，位于 rm删除序列的字符
+        当rm为空时，默认删除空白符（包括'\n', '\r',  '\t',  ' ')
+        
+        a = 'abc\r\n'
+        a.strip()
+        #'abc'
 
 ---
 
