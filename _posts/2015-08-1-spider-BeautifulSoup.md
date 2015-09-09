@@ -39,9 +39,10 @@ excerpt:
 
         capitalli = soup.find('li', class_='account')#获取class为'account'的li标签
         
-* 获取标签里的内容：
+* 获取标签里的内容和特定的属性值：
 
         capital = capitalli.find('p').get_text()
+        capital = capitalli.find('p').attrs['xxx']
         
 * 标签里有多个子标签并列时：先获取全部内容，再用正则分别取特定部分
 
