@@ -6,10 +6,6 @@ categories: python
 excerpt: 
 ---
 
-* content
-{:toc}
-
-
 ### 记录下编写爬虫中遇到的问题 ： 提取URL中的参数
 
 ---
@@ -35,7 +31,7 @@ excerpt:
         
 ---
 
-### 还有分析网页源码中的JSON格式文本可以用这个网站： [Online JSON Viewer](http://jsonviewer.stack.hu/)
+#### 还有分析网页源码中的JSON格式文本可以用这个网站： [Online JSON Viewer](http://jsonviewer.stack.hu/)
 
 ---
 
