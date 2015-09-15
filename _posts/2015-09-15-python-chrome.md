@@ -13,7 +13,7 @@ excerpt:
 
 ---
 
-##### Chrome 快捷键
+#### Chrome 快捷键
 
 * Ctrl+N 打开新窗口 
 * Ctrl+T 打开新标签页
@@ -25,6 +25,7 @@ excerpt:
 * Ctrl+Enter 键 为您在地址栏中输入的内容添加”www.”和”.com”，然后打开网址
 * Ctrl+F 打开”在网页上查找”框
 * F6 或 Ctrl+L 或 Alt+D 选中网址区域中的内容
+
 ---
 
 
