@@ -26,11 +26,11 @@ layout: default
 
           {% endfor %}
           <!-- 分页 -->
-      <div class="site">
-              {% if site.total_pages > 1 %}
+      <div class="paginator">
+              {% if paginator.total_pages > 1 %}
               <!-- 分页代码 -->
-              {% if site.previous_page %}
-            <a href="{{ site.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
+              {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
         {% endif %}
 
         {% for page in (1..site.total_pages) %}
