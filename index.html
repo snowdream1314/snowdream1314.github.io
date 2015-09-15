@@ -26,15 +26,15 @@ layout: default
 
           {% endfor %}
           <!-- 分页 -->
-      <div class="paginator">
-              {% if paginator.total_pages > 1 %}
+      <div class="site">
+              {% if site.total_pages > 1 %}
               <!-- 分页代码 -->
-              {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
+              {% if site.previous_page %}
+            <a href="{{ site.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
         {% endif %}
 
-        {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
+        {% for page in (1..site.total_pages) %}
+            {% if page == site.page %}
               <span class="active">{{ page }}</span>
             {% elsif page == 1 %}
               <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
@@ -43,8 +43,8 @@ layout: default
             {% endif %}
         {% endfor %}
 
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+        {% if site.next_page %}
+            <a href="{{ site.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
         {% endif %}
               {% endif %}
       </div>
