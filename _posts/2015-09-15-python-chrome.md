@@ -2,7 +2,7 @@
 layout: post
 title:  "Chrome"
 date:   2015-09-15 9:56:05
-categories: Chrome 快捷键
+categories: Chrome 
 excerpt: 
 ---
 
@@ -24,6 +24,7 @@ excerpt:
 * Ctrl+Shift+Tab 或 Ctrl+PgUp 切换到上一个标签页
 * Ctrl+Enter 键 为您在地址栏中输入的内容添加”www.”和”.com”，然后打开网址
 * Ctrl+F 打开”在网页上查找”框
+* Ctrl+J 打开下载内容列表
 * F6 或 Ctrl+L 或 Alt+D 选中网址区域中的内容
 
 ---
