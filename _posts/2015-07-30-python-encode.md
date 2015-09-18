@@ -65,6 +65,18 @@ excerpt:
         a.strip()
         #'abc'
 
+        
+* 去除字符串中间的空格：
+        s = "d      d"
+        s1 = ''join(s.split())
+        s2 = ' 'join(s.split())
+        print s1
+        print s2 
+        
+        # 输出为：
+        dd
+        d d       
+        
 ---
 
 > 参考文章：
