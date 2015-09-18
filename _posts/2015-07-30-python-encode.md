@@ -67,6 +67,7 @@ excerpt:
 
         
 * 去除字符串中间的空格：
+
         s = "d      d"
         s1 = ''join(s.split())
         s2 = ' 'join(s.split())
