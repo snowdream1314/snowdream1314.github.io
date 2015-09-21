@@ -79,6 +79,20 @@ excerpt:
 
 ---
 
+#### Python datetime 模块
+        
+        import datetime
+        
+        date1 = '09/17/2015'
+        date2 = datetime.datetime.strptime(date1,"%m/%d/%Y")
+        date3 = date2.strftime("%Y-%m-%d")
+        print date2
+        print date3
+        
+        输出：
+        # 2015-09-17 00:00:00
+        # 2015-09-17
+    
 
 > 参考文章：[RUNOOB.COM](http://www.runoob.com/python/att-time-mktime.html)
 
