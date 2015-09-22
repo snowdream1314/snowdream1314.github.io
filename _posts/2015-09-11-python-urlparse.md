@@ -29,7 +29,22 @@ excerpt:
         ParseResult(scheme='http', netloc='www.baidu.com', path='/index.php', params='', query='username=guol', fragment='')
         >>> print url.netloc
         www.baidu.com
+
+* urlparse 还可以编码解码URL。以get方式提交数据的时候，会在url中添加key=value这样的字符串，所以在value中是不允许有’='，因此要对其进行编码；与此同时服务器接收到这些参数的时候，要进行解码，还原成原始的数据。在爬取网站信息的时候，有时候要获取URL里的信息，就可以用urlparse方法
+
+        import urlparse
+        from urlparse import unquote
+
+        url = "http://www.google.com/support/contact/bin/request.py?entity=%7B%22author%22:%22AIe9_BEW4fia2hKVVTrlUwNzhLS-jMdh3isj0rMd7_Cw85R1-YlRNFkUwoDyhH4aMj7AdHsW5A1po8BinbxspAuLBdB-or_3YzCMNXZKYrb50MIIJCZEpb4%22,%22groups%22:%5B%22general%22,%2254296%7C700726330%22%5D,%22trustedMerchantId%22:%22MID_54316%22%7D&amp;client=242&amp;contact_type=anno&amp;hl=en_US"
+        a= urlparse.urlparse(url).query    # 获取？后面的内容
+        b = unquote(a)     #解码获得的内容
+        c = urlparse.parse_qs(b,True)  # 获得一个字典
+        d = json.loads(c['entity'][0]) # 最终得到了包含需要信息的JSON格式的字典
+        print d.['groups'][-1]
         
+        # 输出最终需要的数据
+        54296|700726330
+                
 * 主要就用到这个方法
         
 ---
