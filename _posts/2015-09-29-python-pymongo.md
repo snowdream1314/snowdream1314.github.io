@@ -47,7 +47,7 @@ excerpt:
 ---
 
 
-> 参考文章：[PyMongo官方文档][http://api.mongodb.org/python/current/api/pymongo/collection.html]
+> 参考文章：[PyMongo官方文档](http://api.mongodb.org/python/current/api/pymongo/collection.html)
 
 ---
 
