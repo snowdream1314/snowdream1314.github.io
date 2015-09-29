@@ -31,7 +31,7 @@ excerpt:
         
         -----
         
-        #得到tab以后，就可以进行相关的一些数据库操作
+        # 得到tab以后，就可以进行相关的一些数据库操作
         dic = {"name":"jim","score":"90","location":"china"}
         
         #插入数据
@@ -43,6 +43,10 @@ excerpt:
         tab.find({"name":"jim"}).count()  #统计符合条件的数据
         tab.find_one({"name":"jim"})  #查询符合的单条记录
         
+        # 查找的数据排序
+        tab.find().sort('name')  #查询结果按name排序，默认为升序
+        tab.find().sort('name'，pymongo.ASCENDING)  #查询结果按name排序，ASCENDING为升序，DESCENDING为降序
+        tab.find().sort([('name',pymongo.ASCENDING),('score',pymongo.DESCENDING)])  #查询结果按多列排序
 
 ---
 
