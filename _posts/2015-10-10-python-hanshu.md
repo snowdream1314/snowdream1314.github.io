@@ -49,7 +49,7 @@ excerpt:
             
 ---
 
-##### Python内建的map()函数
+ * Python内建的map()函数
 
         语法：
         map(f,[1,2,3])  #map()函数接收两个参数，一个是函数，一个是序列
@@ -67,7 +67,7 @@ excerpt:
             
 ---
 
-##### Python内建的reduce()函数
+ *  Python内建的reduce()函数
 
         语法：
         reduce(f, [x1, x2, x3, x4])     #reduce函数接收两个参数，一个是函数，一个是序列
@@ -82,11 +82,39 @@ excerpt:
             reduce(add, [1, 3, 5, 7, 9])
             
             #结果：25
-            
+
+---
+
+ *  Python内建的startswith()函数 
+
+        语法：
+        string.startswith(str, beg=0,end=len(string)) 或 string[beg:end].startswith(str)
+        
+        参数说明：
+        string：  被检测的字符串
+        str：      指定的字符或者子字符串。（可以使用元组，会逐一匹配）
+        beg：    设置字符串检测的起始位置（可选）
+        end：    设置字符串检测的结束位置（可选）
+        如果存在参数 beg 和 end，则在指定范围内检查，否则在整个字符串中检查
+
+        返回值
+        如果检测到字符串，则返回True，否则返回False。默认空字符为True
+
+        函数解析：如果字符串string是以str开始，则返回True，否则返回False
+        
+        例：用于if判断
+        a = "/0-15-2"
+        if a.startswith('/0') : 
+            print "true"
+        else :
+            print "false"
+        
+        #输出： true
+        
 ---
 
 
-> 参考文章：[廖雪峰的官方网站](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00141861202544241651579c69d4399a9aa135afef28c44000)
+> 参考文章：
 
 ---
 
