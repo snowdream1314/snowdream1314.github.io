@@ -92,7 +92,27 @@ excerpt:
         输出：
         # 2015-09-17 00:00:00
         # 2015-09-17
+
+* datetime.datetime.now()获取系统当前时间
     
+        import datetime
+        #获得当前时间
+        now = datetime.datetime.now()  ->这是时间数组格式   #time.time()返回的是浮点数形式
+        #转换为指定的格式:
+        otherStyleTime = now.strftime("%Y-%m-%d %H:%M:%S")
+       
+* 计算时间差 
+
+        threeDayAgo = (datetime.datetime.now() - datetime.timedelta(days = 3))      #三天前时间
+        threeHoursAgo = (datetime.datetime.now() - datetime.timedelta(hours = 3))     #三小时前时间
+        threeMinutesAgo = (datetime.datetime.now() - datetime.timedelta(minutes = 3))   #三分钟前时间
+        
+        #上面返回的都是datetieme对象 例如 datetime.datetime(2015,10,12,12,38,11,57000)
+        #转换为其他格式时间
+        time.mktime(threeDayAgo.timetuple()) #转换成了浮点数形式
+        
+        
+---
 
 > 参考文章：[RUNOOB.COM](http://www.runoob.com/python/att-time-mktime.html)
 
