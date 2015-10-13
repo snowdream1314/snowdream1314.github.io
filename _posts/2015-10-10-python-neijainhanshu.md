@@ -110,7 +110,27 @@ excerpt:
             print "false"
         
         #输出： true
+   
+---
+
+ * Python内建的join()函数用于将序列中的元素以指定的字符连接生成一个新的字符串
+ 
+        语法：
+        str.join(sequence)
         
+        参数说明：
+        sequence -- 要连接的元素序列
+        
+        返回值：
+        返回通过指定字符连接序列中元素后生成的新字符串
+        
+        例：
+        str = "-";
+        seq = ("a", "b", "c"); # 字符串序列
+        print str.join( seq );
+        
+        #输出：a-b-c
+   
 ---
 
 

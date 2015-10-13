@@ -98,6 +98,8 @@ excerpt:
         import datetime
         #获得当前时间
         now = datetime.datetime.now()  ->这是时间数组格式   #time.time()返回的是浮点数形式
+        #获取日期：
+        date = now.date()
         #转换为指定的格式:
         otherStyleTime = now.strftime("%Y-%m-%d %H:%M:%S")
        
@@ -108,7 +110,12 @@ excerpt:
         threeMinutesAgo = (datetime.datetime.now() - datetime.timedelta(minutes = 3))   #三分钟前时间
         
         #上面返回的都是datetieme对象 例如 datetime.datetime(2015,10,12,12,38,11,57000)
+        
+        #获取日期：
+        date = threeDayAgo.date() #datetime.date(2015, 10, 9)
+        
         #转换为其他格式时间
+        datetime.datetime.strftime(date,"%Y-%m-%d") #转换成了字符串 '2015-10-09'
         time.mktime(threeDayAgo.timetuple()) #转换成了浮点数形式
         
         
