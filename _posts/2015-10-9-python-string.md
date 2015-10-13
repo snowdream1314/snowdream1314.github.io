@@ -29,7 +29,20 @@ excerpt:
           print "No 'is' here!"
         else:
           print "Found 'is' in the string."
-          
+
+---
+
+#### string对象提取特定的字符
+
+        string对象拥有可以切片来提取特定的字符
+        例：
+        
+        a = "来自Amazon.com的折扣"
+        
+        a[4:len(a)-6]       #len('来自') = 4
+        
+        #输出：Amazon.com
+                 
 ---
 
 #### 常见的字符串处理函数
