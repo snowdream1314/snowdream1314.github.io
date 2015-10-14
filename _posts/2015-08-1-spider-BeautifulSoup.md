@@ -56,16 +56,23 @@ excerpt:
 
 #### 注意事项： 
 
-*       if "分钟".decode('utf-8') in updatetimeitem  #一般都要加decode('utf-8')，否则会出现编码错误
+ *  汉字在IF条件中：
+     
+        if "分钟".decode('utf-8') in updatetimeitem  #一般都要加decode('utf-8')，否则会出现编码错误
 
-*       find("img", {"alt":True})       #表示有alt属性的img标签
+ *  通过标签属性筛选
+ 
+        find("img", {"alt":True})       #表示有alt属性的img标签  
+        find("img", {"alt":None})       #表示没有alt属性的img标签，也可以写False
 
-*       find("img", {"alt":None})       #表示没有alt属性的img标签，也可以写False
-
-*       item.image = list.find("div", {"class":"hlist-list-pic"}).find("img", {"alt":True}).attrs['data-src']
+ *  选择合适的标签属性
+ 
+        item.image = list.find("div", {"class":"hlist-list-pic"}).find("img", {"alt":True}).attrs['data-src']
         #在取图片的标签时要注意区分动态链接，即选择合适的attrs，一般选没有下划线即不含其它链接的
         
-*       item.href = "http://www.huihui.cn" + str (item.href.find("a", {"data-log":True}).attrs['href'])
+ *  链接
+ 
+        item.href = "http://www.huihui.cn" + str (item.href.find("a", {"data-log":True}).attrs['href'])
         #上面的情况最好加上 str（）
         
 ---            
