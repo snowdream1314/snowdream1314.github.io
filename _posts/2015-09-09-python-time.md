@@ -109,6 +109,8 @@ excerpt:
         threeHoursAgo = (datetime.datetime.now() - datetime.timedelta(hours = 3))     #三小时前时间
         threeMinutesAgo = (datetime.datetime.now() - datetime.timedelta(minutes = 3))   #三分钟前时间
         
+        #注意 days/hours/minutes都必须是整数。不能是字符类型
+        
         #上面返回的都是datetieme对象 例如 datetime.datetime(2015,10,12,12,38,11,57000)
         
         #获取日期：

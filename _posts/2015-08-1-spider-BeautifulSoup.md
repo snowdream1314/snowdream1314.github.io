@@ -51,6 +51,22 @@ excerpt:
         
         repaymode = re.search(u"还款方式.*",repaymodeli).group()#还款方式
         statenow = re.search(u"当前状态.*",repaymodeli).group().replace("\n","").replace("\r","").replace("\t","").replace(" ","")#当前状态
+
+---
+
+#### 注意事项： 
+
+*       if "分钟".decode('utf-8') in updatetimeitem  #一般都要加decode('utf-8')，否则会出现编码错误
+
+*       find("img", {"alt":True})       #表示有alt属性的img标签
+
+*       find("img", {"alt":None})       #表示没有alt属性的img标签，也可以写False
+
+*       item.image = list.find("div", {"class":"hlist-list-pic"}).find("img", {"alt":True}).attrs['data-src']
+        #在取图片的标签时要注意区分动态链接，即选择合适的attrs，一般选没有下划线即不含其它链接的
+        
+*       item.href = "http://www.huihui.cn" + str (item.href.find("a", {"data-log":True}).attrs['href'])
+        #上面的情况最好加上 str（）
         
 ---            
 
