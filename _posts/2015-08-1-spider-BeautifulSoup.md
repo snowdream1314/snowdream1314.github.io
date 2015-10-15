@@ -64,6 +64,7 @@ excerpt:
  
         find("img", {"alt":True})       #表示有alt属性的img标签  
         find("img", {"alt":None})       #表示没有alt属性的img标签，也可以写False
+        find("img", {"alt":None,"class":True})      #可以多个属性过滤
 
  *  选择合适的标签属性
  
@@ -75,6 +76,8 @@ excerpt:
         item.href = "http://www.huihui.cn" + str (item.href.find("a", {"data-log":True}).attrs['href'])
         #上面的情况最好加上 str（）
         
+ *  看清标签之间的关系，特别是没有三角形的标签，即找对标签之间的父子关系
+ 
 ---            
 
 > 参考文章：[静觅博客](http://cuiqingcai.com/1319.html)
