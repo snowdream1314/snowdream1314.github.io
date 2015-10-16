@@ -119,7 +119,25 @@ excerpt:
         #转换为其他格式时间
         datetime.datetime.strftime(date,"%Y-%m-%d") #转换成了字符串 '2015-10-09'
         time.mktime(threeDayAgo.timetuple()) #转换成了浮点数形式
+
+ * 修改获取的时间
+
+        a = '201510161100'
+        b = datetime.datetime.strptime(a,"%Y%m%d%H%M")
+        b
+        #输出：datetime.datetime（2015,10,16,11,0）
         
+        b.replace(hour=23)
+        b 
+        #输出：datetime.datetime（2015,10,16,23,0）
+        #还可以改year,day 
+        
+        #此外：
+        c = datetime.datetime.today().date()
+        c 
+        #输出：datetime.date(2015, 10, 16)
+        c.replace(day=11)
+        #输出：datetime.date(2015, 10, 11)
 ---
 
 #### 待解决的问题
