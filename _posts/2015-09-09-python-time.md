@@ -120,7 +120,21 @@ excerpt:
         datetime.datetime.strftime(date,"%Y-%m-%d") #转换成了字符串 '2015-10-09'
         time.mktime(threeDayAgo.timetuple()) #转换成了浮点数形式
         
-        
+---
+
+#### 待解决的问题
+
+        updatetimeitem = list.find("dl", {"class":"list_con clearfix"}).find("span", {"class":"dp_time"}).get_text().strip()
+        if "今天".decode('utf-8') in updatetimeitem :     #时间格式为“今天10:24”
+            date =  datetime.datetime.strftime (datetime.datetime.today().date(),"%Y%m%d") #日期
+            
+            # time = filter(lambda x:x.isdigit(), updatetimeitem) #时间
+            # updatetime = date + time    这样写下面mktime会报错，'unicode ...没有mktime属性之类的'
+            
+            updatetime = datetime.datetime.strftime (datetime.datetime.today().date(),"%Y%m%d") + filter(lambda x:x.isdigit(), updatetimeitem)  #这样写通过
+            
+            item.updatetime = time.mktime(time.strptime(updatetime, "%Y%m%d%H%M")) 
+            
 ---
 
 > 参考文章：[RUNOOB.COM](http://www.runoob.com/python/att-time-mktime.html)
