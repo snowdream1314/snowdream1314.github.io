@@ -39,6 +39,11 @@ excerpt:
 
         capitalli = soup.find('li', class_='account')#获取class为'account'的li标签
         
+        capitalli = soup.find('li', text = "Next") #获取标签文本为"Next"的标签
+        
+        例： <a href="page-2.html" style="text-decoration:underline;">Next</a>
+        next_page = soup.find("a", text="Next")
+        
 * 获取标签里的内容和特定的属性值：
 
         capital = capitalli.find('p').get_text()
