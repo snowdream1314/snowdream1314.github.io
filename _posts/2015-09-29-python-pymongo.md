@@ -47,6 +47,17 @@ excerpt:
         tab.find().sort('name')  #查询结果按name排序，默认为升序
         tab.find().sort('name'，pymongo.ASCENDING)  #查询结果按name排序，ASCENDING为升序，DESCENDING为降序
         tab.find().sort([('name',pymongo.ASCENDING),('score',pymongo.DESCENDING)])  #查询结果按多列排序
+        
+        -----
+        
+        #关闭mongo服务，关闭后就断开了数据库的所有连接
+        #服务端口
+        CTRL + C    
+        
+        #客户端口
+        use admin
+        db.runCommand("shutdown")
+        或者db.shutdownServer()
 
 ---
 
