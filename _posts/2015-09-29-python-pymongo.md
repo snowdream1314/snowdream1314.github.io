@@ -54,12 +54,21 @@ excerpt:
         tab.find({"name":"jim"})  #查询所有符合记录
         tab.find({"name":"jim"}).count()  #统计符合条件的数据
         tab.find_one({"name":"jim"})  #查询符合的单条记录
-        tab.find({"age":20}).limit(10)  #根据条件检索10条记录
+        tab.find({"age":20}).limit(10)  #根据条件检索10条记录,限制返回记录数量limit()
         
         # 查找的数据排序
-        tab.find().sort('name')  #查询结果按name排序，默认为升序
+        tab.find().sort('name')  #查询结果按name排序，默认为升序        
+        db.users.find().sort({age: 1});  # 以年龄升序asc       
+        db.users.find().sort({age: -1})  # 以年龄降序desc 
         tab.find().sort('name'，pymongo.ASCENDING)  #查询结果按name排序，ASCENDING为升序，DESCENDING为降序
         tab.find().sort([('name',pymongo.ASCENDING),('score',pymongo.DESCENDING)])  #查询结果按多列排序
+        
+        #返回3条记录并打印信息 
+        db.users.find().limit(3).forEach(function(user) {print('my age is ' + user.age)}); 
+        #结果：
+        my age is 18 
+        my age is 19 
+        my age is 20
 
 * 删除
         
