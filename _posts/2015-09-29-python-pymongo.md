@@ -29,26 +29,64 @@ excerpt:
         # 以上2句也可以合并成一句
         tab = client.xxqmon.collectionname  or  tab = client['xxqmon']['collectionname']
         
-        -----
+-----
+
+#### 增删改查数据
         
         # 得到tab以后，就可以进行相关的一些数据库操作
         dic = {"name":"jim","score":"90","location":"china"}
+
+* 插入数据：
         
         #插入数据
         tab.insert(dic)  #直接就已经插入数据库了，没有类似Mysql的commit语句
         tab.insert([dic1,dic2...])  #批量插入多条数据
+
+* 查看
+        
+        #查看所有数据库
+         show dbs
+
+        #查看所有的collection
+        show collections
         
         # 查找数据
         tab.find({"name":"jim"})  #查询所有符合记录
         tab.find({"name":"jim"}).count()  #统计符合条件的数据
         tab.find_one({"name":"jim"})  #查询符合的单条记录
+        tab.find({"age":20}).limit(10)  #根据条件检索10条记录
         
         # 查找的数据排序
         tab.find().sort('name')  #查询结果按name排序，默认为升序
         tab.find().sort('name'，pymongo.ASCENDING)  #查询结果按name排序，ASCENDING为升序，DESCENDING为降序
         tab.find().sort([('name',pymongo.ASCENDING),('score',pymongo.DESCENDING)])  #查询结果按多列排序
+
+* 删除
         
-        -----
+        #删除yy=5的记录
+        db.foo.remove({'yy':5})
+
+        #删除所有的记录
+        db.foo.remove()
+        
+        #删除collection
+        db.collection.drop()
+
+        #删除当前的数据库
+        db.dropDatabase()
+        
+ * 更新，也即修改数据       
+        
+        # $set修改器
+        db.user.update({"name":"jack"}, {$set:{"age":10}})  #把"name"为"jack"的"age"改为10
+        
+        #数据库中没有，则新增一条
+        db.user.update({"name":"jack"}, {$set:{"age":10}}, upsert=true, multi=true)
+        #upsert=true表示没有则增加；multi=true表示允许修改多条记录
+        
+-----
+
+#### 关闭服务
         
         #关闭mongo服务，关闭后就断开了数据库的所有连接
         #服务端口
@@ -58,6 +96,12 @@ excerpt:
         use admin
         db.runCommand("shutdown")
         或者db.shutdownServer()
+
+---
+
+#### 其他常用的命令
+
+        
 
 ---
 
