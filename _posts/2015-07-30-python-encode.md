@@ -14,6 +14,22 @@ excerpt:
 
 ---
 
+#### 爬网页将网络数据流写入到本地文件、写文件时常见的一个编码问题
+
+> * 问题：UnicodeEncodeError: 'gbk' codec can't encode character '\xa0' in position ... 
+
+> 分析：在windows下面编写python脚本，编码问题很严重。
+
+   * 将网络数据流写入文件时时，我们会遇到几个编码：
+
+    1： #encoding='XXX' 这里(也就是python文件第一行的内容)的编码是指该python脚本文件本身的编码，无关紧要。只要XXX和文件本身的编码相同就行了。 比如notepad++ "格式"菜单里面里可以设置各种编码，这时需要保证该菜单里设置的编码和encoding XXX相同就行了，不同的话会报错
+
+    2：网络数据流的编码 ： 比如获取网页，那么网络数据流的编码就是网页的编码。需要使用decode解码成unicode编码。
+
+    3：目标文件的编码 ： 要将网络数据流的编码写入到新文件，那么我们需要指定新文件的编码。写文件代码如：f.write(txt)，那么txt是一个字符串，它是通过decode解码过的字符串。关键点就要来了：目标文件的编码是导致标题所指问题的罪魁祸首。如果我们打开一个文件： f = open("out.html","w")，在windows下面，新文件的默认编码是gbk，这样的话，python解释器会用gbk编码去解析我们的网络数据流txt，然而txt此时已经是decode过的unicode编码，这样的话就会导致解析不了，出现上述问题。 解决的办法就是，改变目标文件的编码： f = open("out.html","w",encoding='utf-8')。这样，问题将不复存在
+
+---
+
 ####把list或dict中的中文写入文件
 
 > * 方法是是把list或dict转化成josn格式的字符串输出
