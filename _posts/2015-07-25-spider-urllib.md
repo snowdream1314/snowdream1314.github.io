@@ -92,7 +92,16 @@ excerpt:
         result = opener.open(gradeUrl)
         print result.read()
             
----            
+---
+
+#### 捕获404异常 ：
+
+        status = urllib.urlopen(articleurl).code
+        if status == 404 :  #有个别链接失效
+            print "return 404 error"
+            continue
+            
+---           
 
 > 参考文章：[静觅博客](http://cuiqingcai.com/968.html)
 
