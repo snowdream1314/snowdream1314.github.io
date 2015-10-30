@@ -56,6 +56,14 @@ excerpt:
         tab.find_one({"name":"jim"})  #查询符合的单条记录
         tab.find({"age":20}).limit(10)  #根据条件检索10条记录,限制返回记录数量limit()
         
+        查找数据时可以再后面加上 pretty()以易读的方式来读取数据
+        > db.user.find().pretty()
+        {
+                "_id" : ObjectId("5627021a632a927246ecd9c7"),
+                "name" : "jack",
+                "age" : 23
+        }
+        
         # 查找的数据排序
         tab.find().sort('name')  #查询结果按name排序，默认为升序        
         db.users.find().sort({age: 1});  # 以年龄升序asc       
