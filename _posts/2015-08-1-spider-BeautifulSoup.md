@@ -44,6 +44,18 @@ excerpt:
         例： <a href="page-2.html" style="text-decoration:underline;">Next</a>
         next_page = soup.find("a", text="Next")
         
+* 获取当前标签的下一个兄弟标签
+
+        watchednumitem = div.find("div", {"class":"article_meta article_meta_nowrap"}).find("span", {"class":None})
+        print watchednumitem
+        watchednumitem_text = watchednumitem.get_text().strip()
+        if filter(lambda x : x.isdigit(),watchednumitem_text) == '' :
+            watchednumitem = watchednumitem.find_next()     #获取下一个兄弟标签
+            print watchednumitem
+            watchednumitem_text = watchednumitem.get_text().strip()
+        watchednum = int (filter(lambda x : x.isdigit(),watchednumitem_text))
+        print "阅读数为：%s" %watchednum
+        
 * 获取标签里的内容和特定的属性值：
 
         capital = capitalli.find('p').get_text()
