@@ -98,6 +98,22 @@ excerpt:
         
 ---
 
+### base64编解码
+
+        import base64
+        origin_url = "http://www.juanpi.com/ref_click?url=aHR0cDovL2l0ZW0udGFvYmFvLmNvbS9pdGVtLmh0bT9pZD00MzM1Mjc4MDA4NA=="
+        #origin_url中的url后面的一串就是经过64编码的，取出来以后解码就可得到最终链接
+        url = origin_url.split("url")
+        try :   
+            real_url_b64 = real_url.split('url')[-1]
+            real_url = base64.b64decode(real_url_b64)
+            print "[XXXXX] real url3:", real_url
+        except Exception,e :
+            print str(e)
+        
+        #解码的时候很容易出现错误："Incorrect padding";原因是有长度限制，需要补齐,具体可上网查询。
+        
+---
 > 参考文章：
 
 ---
