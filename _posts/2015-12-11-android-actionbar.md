@@ -25,36 +25,36 @@ excerpt:
 
 ####问题解决
 
-*来自牛人的破解···
+* 来自牛人的破解···
 
-        public class MyActivity extends ActionBarActivity {
-            @Override
-            protected void onCreate(Bundle savedInstanceState) {
-                ...
-                 
-                getOverflowMenu();
-            }
-         
-            //force to show overflow menu in actionbar for android 4.4 below
-            private void getOverflowMenu() {
-                 try {
-                    ViewConfiguration config = ViewConfiguration.get(this);
-                    Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
-                    if(menuKeyField != null) {
-                        menuKeyField.setAccessible(true);
-                        menuKeyField.setBoolean(config, false);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
+    public class MyActivity extends ActionBarActivity {
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            ...
+             
+            getOverflowMenu();
+        }
+     
+        //force to show overflow menu in actionbar for android 4.4 below
+        private void getOverflowMenu() {
+             try {
+                ViewConfiguration config = ViewConfiguration.get(this);
+                Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+                if(menuKeyField != null) {
+                    menuKeyField.setAccessible(true);
+                    menuKeyField.setBoolean(config, false);
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
+    }
 
 ---
 
 
 > 参考文章：[官方培训教程中文版](http://hukai.me/android-training-course-in-chinese/basics/actionbar/setting-up.html)
-            []
+            [Android中ActionBar中不显示overflow](http://www.crifan.com/android_actionbar_three_dot_overflow_not_show/)
 
 ---
 
