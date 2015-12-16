@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "爬虫之urllib"
+title:  "爬虫之urllib/ullib2/httplib2"
 date:   2015-07-27 20:50:05
 categories: web
 excerpt: 
@@ -100,9 +100,8 @@ excerpt:
         if status == 404 :  #有个别链接失效
             print "return 404 error"
             continue
-            
----           
-
+                     
+---
 > 参考文章：[静觅博客](http://cuiqingcai.com/968.html)
 
 ---
