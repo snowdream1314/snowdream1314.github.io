@@ -129,3 +129,7 @@ excerpt:
         
         查看用户： 
         rabbitmqctl list_users
+        
+---
+
+> 参考文章：[RabbitMQ从入门到精通](http://blog.csdn.net/column/details/rabbitmq.html)
