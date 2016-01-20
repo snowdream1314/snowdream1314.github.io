@@ -58,9 +58,9 @@ excerpt:
 
 > * 参数设置解释：
 
-    * durable=True:指定durable参数为真，队列将持久化；
+* durable=True:指定durable参数为真，队列将持久化；
      
-    * properties=pika.BasicProperties(delivery_mode = 2,): #启用消息持久化，可以防止RabbitMQ Server 重启或者crash引起的数据丢失。
+* properties=pika.BasicProperties(delivery_mode = 2,): #启用消息持久化，可以防止RabbitMQ Server 重启或者crash引起的数据丢失。
         
         消费者
         receiver.py 
@@ -85,11 +85,11 @@ excerpt:
 
 > * 参数设置解释：
 
-    *  ch.basic_ack(delivery_tag = method.delivery_tag):告诉rabbitmq消息已经正确处理。如果没有这条代码，Consumer退出时，Message会重新分发。然后RabbitMQ会占用越来越多的内存，由于RabbitMQ会长时间运行，因此这个“内存泄漏”是致命的。
+*  ch.basic_ack(delivery_tag = method.delivery_tag):告诉rabbitmq消息已经正确处理。如果没有这条代码，Consumer退出时，Message会重新分发。然后RabbitMQ会占用越来越多的内存，由于RabbitMQ会长时间运行，因此这个“内存泄漏”是致命的。
      
-    * no_ack=True:默认为假。设置no-ack参数为真，每次Consumer接到数据后，而不管是否处理完成，RabbitMQ Server会立即把这个Message标记为完成，然后从queue中删除了。为了保证数据不被丢失，RabbitMQ支持消息确认机制，即acknowledgments。为了保证数据能被正确处理而不仅仅是被Consumer收到，那么我们不能采用no-ack。而应该是在处理完数据后发送ack。
+* no_ack=True:默认为假。设置no-ack参数为真，每次Consumer接到数据后，而不管是否处理完成，RabbitMQ Server会立即把这个Message标记为完成，然后从queue中删除了。为了保证数据不被丢失，RabbitMQ支持消息确认机制，即acknowledgments。为了保证数据能被正确处理而不仅仅是被Consumer收到，那么我们不能采用no-ack。而应该是在处理完数据后发送ack。
     
-    * channel.basic_qos(prefetch_count=1)公平分发。这样RabbitMQ就会使得每个Consumer在同一个时间点最多处理一个Message。换句话说，在接收到该Consumer的ack前，他它不会将新的Message分发给它。
+* channel.basic_qos(prefetch_count=1)公平分发。这样RabbitMQ就会使得每个Consumer在同一个时间点最多处理一个Message。换句话说，在接收到该Consumer的ack前，他它不会将新的Message分发给它。
     
 * 分别在2个终端运行sender.py 和receiver.py 即可。
 
