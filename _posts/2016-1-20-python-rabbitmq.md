@@ -16,16 +16,19 @@ excerpt:
 
 #### win7/8安装Rabbitmq
 
-* RabbitMQ 是建立在强大的Erlang OTP平台上，因此安装Rabbit MQ的前提是安装Erlang[http://www.erlang.org/download/otp_win32_R16B03.exe]
+* RabbitMQ 是建立在强大的Erlang OTP平台上，因此安装Rabbit MQ的前提是安装Erlang(http://www.erlang.org/download/otp_win32_R16B03.exe)
 
-* 然后安装rabbitmq[http://www.rabbitmq.com/download.html] , 默认安装的Rabbit MQ 监听端口是5672.
+* 然后安装rabbitmq(http://www.rabbitmq.com/download.html), 默认安装的Rabbit MQ 监听端口是5672.
 
 * 使用Rabbit MQ 管理插件，可以更好的可视化方式查看Rabbit MQ 服务器实例的状态：
-    激活方式：在终端使用命令："C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin\rabbitmq-plugins.bat" enable rabbitmq_management
+    激活方式：在终端使用命令：
+        "C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin\rabbitmq-plugins.bat" enable rabbitmq_management
 
-* 重启服务：net stop RabbitMQ && net start RabbitMQ
+* 重启服务：
+        net stop RabbitMQ && net start RabbitMQ
 
-* 使用rabbitmqctl控制台命令来创建用户，密码，绑定权限等：如：C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin>rabbitmqctl.bat add_user name password
+* 使用rabbitmqctl控制台命令来创建用户，密码，绑定权限等：如：
+        C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin>rabbitmqctl.bat add_user name password
 
 * 以上最好在管理员权限下运行
 
