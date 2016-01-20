@@ -20,9 +20,8 @@ excerpt:
 
 * 然后安装[rabbitmq](http://www.rabbitmq.com/download.html), 默认安装的Rabbit MQ 监听端口是5672.
 
-* 使用Rabbit MQ 管理插件，可以更好的可视化方式查看Rabbit MQ 服务器实例的状态：
+* 使用Rabbit MQ 管理插件，可以更好的可视化方式查看Rabbit MQ 服务器实例的状态：激活方式：在终端使用命令：
 
-    激活方式：在终端使用命令：
         "C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin\rabbitmq-plugins.bat" enable rabbitmq_management
 
 * 重启服务：
