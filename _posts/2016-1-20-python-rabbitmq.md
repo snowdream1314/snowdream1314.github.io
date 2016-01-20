@@ -73,8 +73,27 @@ excerpt:
         
 * 分别在2个终端运行sender.py 和receiver.py 即可。
 
-* 产生pika.exceptions.ConnectionClosed错误，是因为没有开启rabbitmq服务。在C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin目录下，运行rabbitmq-server start即可
-
-* 在C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin下运行rabbitmqctl.bat list_queues命令会显示当前的queue，以及queue中的消息数。如：
+        产生pika.exceptions.ConnectionClosed错误，是因为没有开启rabbitmq服务。
+        C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin
+        rabbitmq-server start
+        
+        显示当前的queue，以及queue中的消息数
+        C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin
+        rabbitmqctl.bat list_queues
+        //输出
         Listing queues ...
         hello   1
+
+        其他命令：
+        C:\Program Files\RabbitMQ Server\rabbitmq_server-3.6.0\sbin
+        
+        打开关闭服务
+        rabbitmq-server start
+        rabbitmq-server stop
+        
+        打开关闭应用,启动应用，和关闭命令配合使用，达到清空队列的目的
+        rabbitmqctl start_app
+        rabbitmqctl stop_app
+        
+        清除所有队列
+        rabbitmqctl reset
