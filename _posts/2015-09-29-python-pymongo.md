@@ -116,6 +116,20 @@ excerpt:
 
 ---
 
+#### 如何将MongoDB做一项windows服务启动
+        
+        mongod --logpath C:\Users\CB-Ye\my_workspace\MongoDB\logs\MongoDB.log --logappend --dbpath C:\Users\CB-Ye\my_workspace\MongoDB\data --directoryperdb --serviceName MongoDB --install
+        
+        //参数解释：
+        --logappend: 日志是以追加的方式输出的;
+        --directoryperdb: 每个DB都会新建一个目录；
+        --install: 安装；
+        
+        //注意点：
+        log一定要指定一个xxx.log文件,文件不存在也要这么写，会自动创建;
+        这条命令要到MongoDB的bin目录下运行;
+---
+
 #### 其他常用的命令
 
         
