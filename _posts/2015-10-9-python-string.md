@@ -2,7 +2,7 @@
 layout: post
 title:  "Python String"
 date:   2015-10-9 11:08:05
-categories: Python
+categories: python
 excerpt: 
 ---
 

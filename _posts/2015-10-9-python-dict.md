@@ -2,7 +2,7 @@
 layout: post
 title:  "Python Dict"
 date:   2015-10-9 15:08:05
-categories: Python
+categories: python
 excerpt: 
 ---
 

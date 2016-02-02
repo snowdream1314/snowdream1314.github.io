@@ -2,7 +2,7 @@
 layout: post
 title:  "Python 内建函数"
 date:   2015-10-10 15:36:05
-categories: Python
+categories: python
 excerpt: 
 ---
 
