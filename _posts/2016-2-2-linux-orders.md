@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "linux 常用命令"
+title:  "linux 常用命令之后台运行"
 date:   2016-2-2 10:55:05
 categories: linux
 excerpt: 
