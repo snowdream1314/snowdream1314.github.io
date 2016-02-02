@@ -163,6 +163,23 @@ excerpt:
 
 ---
 
+* Python内建的 enumerate()函数，可以在每次循环中同时得到下标和元素：
+
+        例：
+        a = 'abcdef'
+        for (index,value) in enumerate(a):
+        print index,a
+        
+        #输出：
+            0 a
+            1 b
+            2 c
+            3 d
+            4 e
+            5 f
+
+---
+
 > 参考文章：
 
 ---
