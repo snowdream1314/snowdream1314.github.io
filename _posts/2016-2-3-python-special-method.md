@@ -9,6 +9,8 @@ excerpt:
 * content
 {:toc}
 
+---
+
 ###记录用到的Python特殊方法
 
 ---
