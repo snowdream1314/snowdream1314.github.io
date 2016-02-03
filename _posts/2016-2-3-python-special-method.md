@@ -88,6 +88,12 @@ excerpt:
 * Python中还有一个__getattribute__特殊方法，用于查询任意属性。__getattr__只能用来查询不在__dict__系统中的属性。
          
 * 此外__setattr__(self, name, value)和__delattr__(self, name)可用于修改和删除属性。它们的应用面更广，可用于任意属性。  
+
+* 还可以使用函数 hasattr(obj, attr_name)   # attr_name是一个字符串,来确认一个对象是否具有某个属性
+
+        a = [1,2,3]
+        print(hasattr(a,'append'))
+        #True
           
 ---
 
