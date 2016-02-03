@@ -58,7 +58,7 @@ excerpt:
             
 ---
 
-*  特殊方法之__getattr__和_getattribute__
+*  特殊方法之__getattr__()和_getattribute__()
 
 *  在Python中，可以用__getattr__(self, name)来查询即时生成的属性，__getattr__可以将所有的即时生成属性放在同一个函数中处理。
 
