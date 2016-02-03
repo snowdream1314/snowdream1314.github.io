@@ -21,7 +21,7 @@ excerpt:
 
 ---
 
-*  __call__()
+*  特殊方法之__call__()
        
 *  在Python中，函数也是一种对象。实际上，任何一个有__call__()特殊方法的对象都被当作是函数。
  
@@ -35,7 +35,7 @@ excerpt:
             
 ---
 
-*  __enter__()和__exit__()
+*  特殊方法之__enter__()和__exit__()
 
 *  任何定义了__enter__()和__exit__()方法的对象都可以用于上下文管理器。(上下文管理器的语法形式是with...as...)
  
@@ -58,7 +58,7 @@ excerpt:
             
 ---
 
-*  __getattr__和_getattribute__
+*  特殊方法之__getattr__和_getattribute__
 
 *  在Python中，可以用__getattr__(self, name)来查询即时生成的属性，__getattr__可以将所有的即时生成属性放在同一个函数中处理。
 
