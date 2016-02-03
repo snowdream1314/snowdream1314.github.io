@@ -83,9 +83,10 @@ excerpt:
 
         print(summer.male)
 
-* Python中还有一个__getattribute__特殊方法，用于查询任意属性。__getattr__只能用来查询不在__dict__系统中的属性
+* Python中还有一个__getattribute__特殊方法，用于查询任意属性。__getattr__只能用来查询不在__dict__系统中的属性。
          
-            
+* 此外__setattr__(self, name, value)和__delattr__(self, name)可用于修改和删除属性。它们的应用面更广，可用于任意属性。  
+          
 ---
 
 > 参考文章：[Python深入01 特殊方法与多范式](http://www.cnblogs.com/vamei/archive/2012/11/19/2772441.html)
