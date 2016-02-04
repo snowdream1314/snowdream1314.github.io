@@ -18,8 +18,8 @@ excerpt:
 * 远程登录linux服务器：
         
         登录：
-        在cmder下输入：
-        ssh 服务器名@IP,如：ssh root@127.0.0.1
+        在cmder下输入：ssh 服务器名@IP,如：
+        ssh root@127.0.0.1
         然后根据提示输入登录密码即可
         
         文件传输：
@@ -28,6 +28,19 @@ excerpt:
         从本机上传文件到服务器：
         scp /xxxx(本机目录)  abc@IP(服务器)：/home/abc/xxxx(文件) 
         
+---
+
+#### 查看日志
+
+* linux 日志文件夹的默认存储路径是：/var/log
+
+* 日志是一种文本文件，因此可以使用查看文本文件的命令来查看日志。
+
+        cat /var/log/messages 查询日志的全部内容
+        head -5 /var/log/messages 查询日志的前5行
+        tail -5 /var/log/messages 查询日志的最新5行
+        sed -n '5,10p' /var/log/messages 查询日志的5到10行
+
 ---
 
 > 参考文章：
