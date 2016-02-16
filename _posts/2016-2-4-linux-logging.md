@@ -70,4 +70,4 @@ excerpt:
 
 ---
 
-> 参考文章：
+> 参考文章：[Linux 系统中用户切换](http://www.cnblogs.com/oradragon/archive/2012/08/30/2664551.html)
