@@ -167,4 +167,10 @@ excerpt:
         
 ---
 
+#### web管理工具
+
+* 先定位到rabbitmq安装目录 , 然后输入命令rabbitmq-plugins enable rabbitmq_management.启动后直接在浏览器地址输入：http://localhost:15672/   账号密码都是：guest 即可。
+
+---
+
 > 参考文章：[RabbitMQ从入门到精通](http://blog.csdn.net/column/details/rabbitmq.html) [RabbitMQ用户角色及权限控制](http://blog.csdn.net/zyz511919766/article/details/42292655)
