@@ -32,7 +32,7 @@ excerpt:
     
 ---
 
-####把list或dict中的中文写入文件
+#### 把list或dict中的中文写入文件
 
 > * 方法是是把list或dict转化成josn格式的字符串输出
             
@@ -67,7 +67,7 @@ excerpt:
         
 ---        
 
-####去除字符串中的空格、换行符(\n)、tab(\t)、新行(\r)
+#### 去除字符串中的空格、换行符(\n)、tab(\t)、新行(\r)
 
         str..replace("\n","").replace("\r","").replace("\t","").replace(" ","")
         
@@ -114,6 +114,7 @@ excerpt:
         #解码的时候很容易出现错误："Incorrect padding";原因是有长度限制，需要补齐,具体可上网查询。
         
 ---
+
 > 参考文章：
 
 ---
