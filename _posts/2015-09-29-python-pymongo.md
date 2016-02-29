@@ -2,7 +2,7 @@
 layout: post
 title:  "PyMongo"
 date:   2015-09-29 16:08:05
-categories: PyMongo 
+categories: MongoDB
 excerpt: 
 ---
 
