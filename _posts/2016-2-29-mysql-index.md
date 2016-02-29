@@ -147,4 +147,4 @@ excerpt:
 
 ---
 
-> 参考文章：
+> 参考文章：[MySQL索引使用方法和性能优化](http://feiyan.info/16.html)
