@@ -9,7 +9,7 @@ excerpt:
 * content
 {:toc}
 
-### 今天用到了新的数据库PyMongo
+### 今天接触到了新的数据库Mongodb,用到的python模块为PyMongo
 
 ---
 
