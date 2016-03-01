@@ -44,7 +44,8 @@ excerpt:
         
        
 
-* 插入数据：
+* 插入数据：insert into <表名> [(<字段名1>[,..<字段名n > ])] values ( 值1 )[, ( 值n )];
+
         
         
 
@@ -113,7 +114,7 @@ excerpt:
 
 * 退出MYSQL命令： exit （回车）
 
-* 修改密码:
+* 修改密码:直接在终端中，不需要登录mysql
 
         格式：mysqladmin -u用户名 -p旧密码 password 新密码
         
