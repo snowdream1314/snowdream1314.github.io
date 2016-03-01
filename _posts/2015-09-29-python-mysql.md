@@ -99,6 +99,9 @@ excerpt:
         #删除表中的内容，让表字段重新从1开始自增
         truncate 表名
         
+        给主键添加自增属性
+        alter table 表名 MODIFY 键名 INT UNSIGNED AUTO_INCREMENT;
+        
 * 设置字段自增的2个系统变量：auto_increment_offset和auto_increment_increment
 
         auto_increment_increment  控制列中的值的增量值，也就是步长。取值范围是1 .. 65535.
@@ -108,6 +111,12 @@ excerpt:
         SET @@auto_increment_offset=1;
         SET @@auto_increment_increment=1;
 
+* 加索引： 
+
+        alter table 表名 add index 索引名 (字段名1[，字段名2 …]);
+        例：
+        alter table employee add index emp_name (name);
+        
 ---
 
 #### 其他常用的命令
