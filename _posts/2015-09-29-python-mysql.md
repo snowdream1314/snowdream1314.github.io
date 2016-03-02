@@ -116,6 +116,12 @@ excerpt:
         alter table 表名 add index 索引名 (字段名1[，字段名2 …]);
         例：
         alter table employee add index emp_name (name);
+   
+* 删除索引：
+
+        alter table 表名 drop index 索引名;
+        例：
+        alter table employee drop index emp_name;
         
 ---
 

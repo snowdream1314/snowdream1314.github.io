@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PyMongo"
+title:  "MongoDB Index"
 date:   2016-02-29 17:08:05
 categories: MongoDB
 excerpt: 
