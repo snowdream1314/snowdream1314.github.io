@@ -9,11 +9,11 @@ excerpt:
 * content
 {:toc}
 
-### MySQL的相关操作
+### MySQL的相关操作（基于python-mysql）
 
 ---
 
-#### 连接到mysql
+#### 连接到mysql（和python-mysql无关）
         
 * 安装好Mysql后。把安装目录下的Mysql.exe的文件路径加入系统环境变量中，启动终端后即可执行mysql命令
 
@@ -40,13 +40,13 @@ excerpt:
         
 -----
 
-#### 增删改查数据
+#### 增删改查数据（基于python-mysql）
         
        
 
-* 插入数据：insert into <表名> [(<字段名1>[,..<字段名n > ])] values ( 值1 )[, ( 值n )];
+* 插入数据：
 
-        
+        db.insert("cv_video_episodes", ve_video_id=video_id, ve_video_name=video_name, ve_episode_id=episode_id)        
         
 
 * 查看
@@ -54,6 +54,8 @@ excerpt:
         查询值为空的记录,要用 ：字段 is null
         SELECT * FROM `yjk_eb_deal` WHERE d_ds_id=6 AND d_deal_url is null;
         
+        查询最新的一条记录：
+        SELECT * FROM 表名 ORDER BY id DESC LIMIT 0,1 ;
 
 * 删除
         
@@ -61,7 +63,8 @@ excerpt:
         
  * 更新，也即修改数据       
         
-       
+       db.execute("update cv_video_detail_msg_copy set cv_played_count=%s, cv_video_rate=%s, cv_comment_num=%s, cv_support_num=%s, \
+                        cv_update_schedule=%s, cv_update_status=%s", played_count, video_rating, comment_num, support_num, update_schedule, update_status)
         
 -----
 
