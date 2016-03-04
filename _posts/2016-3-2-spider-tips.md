@@ -44,6 +44,11 @@ excerpt:
         # time.sleep(5)
         dr.quit()
 
+* 需要先配置好环境，安装selenium、PhantomJS、chromedriver
+
+* 由于是运行在远程服务器而不是在本地，服务器显示器关闭的时候，当调用的火狐浏览器时就会报错：The browser appears to have exited before we could connect. The output was: Error: no display specified\n; 调用chrome浏览器时也会报错：unknown error: Chrome failed to start；
+
+
 ---
 
 #### 其他
@@ -53,7 +58,7 @@ excerpt:
 ---
 
 
-> 参考文章：[轻松自动化---selenium-webdriver](http://www.cnblogs.com/fnng/p/3193955.html)
+> 参考文章：[轻松自动化---selenium-webdriver](http://www.cnblogs.com/fnng/p/3193955.html)、[ChromeDriver executable needs to be available in the path](http://stackoverflow.com/questions/26477603/chromedriver-executable-needs-to-be-available-in-the-path)
 
 ---
 
