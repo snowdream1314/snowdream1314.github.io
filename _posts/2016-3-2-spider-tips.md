@@ -21,6 +21,31 @@ excerpt:
 
 ---
 
+#### selenium模拟浏览器爬取动态页面
+
+        #coding = utf-8
+
+        from selenium import webdriver
+        from selenium.webdriver.support.ui import WebDriverWait
+        from bs4 import BeautifulSoup as bs4
+        import time
+
+        dr = webdriver.Chrome()
+        # driver = webdriver.PhantomJS()
+        dr.get('http://v.youku.com/v_show/id_XMTQ4ODEwOTI4OA==.html?from=y1.12-95')
+        WebDriverWait(dr,10).until(lambda the_driver: the_driver.find_element_by_id('video_comment_number').get_attribute('title') != '')
+        # time.sleep(15)
+        # print browser.title.encode('utf-8')
+        # data = browser.find_element_by_xpath("//div[@id='fn_comment']/a/span[2]")
+        page_soup = bs4(dr.page_source)
+        data = page_soup.find("span", {"id":"videoTotalComment"}).get_text()
+        # data = browser.find_element_by_id('videoTotalPV').find_element_by_class('num').text
+        print "data is %s" % data
+        # time.sleep(5)
+        dr.quit()
+
+---
+
 #### 其他
 
 * [Online JSON Viewer](http://jsonviewer.stack.hu/) 是一个在线解析Json数据的工具，可以把Json格式的数据粘贴进去，查看Json的结构
@@ -28,7 +53,7 @@ excerpt:
 ---
 
 
-> 参考文章：
+> 参考文章：[轻松自动化---selenium-webdriver](http://www.cnblogs.com/fnng/p/3193955.html)
 
 ---
 
