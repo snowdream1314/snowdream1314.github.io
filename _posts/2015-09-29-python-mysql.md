@@ -161,7 +161,8 @@ excerpt:
         GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON 数据库名.* TO 数据库名@localhost IDENTIFIED BY '密码';
         SET PASSWORD FOR '数据库名'@'localhost' = OLD_PASSWORD('密码');
         依次执行3个命令完成数据库创建。
-        
+
+* 通过运行sql文件创建数据库        
 ---
 
 
