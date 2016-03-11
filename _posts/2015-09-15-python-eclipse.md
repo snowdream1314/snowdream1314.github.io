@@ -68,6 +68,10 @@ excerpt:
 
 ---
 
+#### 新建项目后，通过new --> link to exiting source 可以关联资源文件，这样可以方便的在本地编辑服务器上的程序
+
+---
+
 
 > 参考文章：[能够提高开发效率的Eclipse实用操作](http://blog.csdn.net/linsongbin1/article/details/48954353?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
 
