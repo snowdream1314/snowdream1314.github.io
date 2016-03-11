@@ -162,7 +162,31 @@ excerpt:
         SET PASSWORD FOR '数据库名'@'localhost' = OLD_PASSWORD('密码');
         依次执行3个命令完成数据库创建。
 
-* 通过运行sql文件创建数据库        
+* 通过运行sql文件创建数据库
+
+        方法一 使用cmd命令执行(windows下，unix或linux在的其控制台下)
+        【Mysql的bin目录】\mysql –u用户名 –p密码 –D数据库<【sql脚本文件路径全名】，示例：
+        D:\mysql\bin\mysql –uroot –p123456 -Dtest<d:\test\ss.sql
+        注意：
+        A、如果在sql脚本文件中使用了use 数据库，则-D数据库选项可以忽略
+        B、如果【Mysql的bin目录】中包含空格，则需要使用“”包含，如：“C:\Program Files\mysql\bin\mysql” –u用户名 –p密码 –D数据库<【sql脚本文件路径全名】
+
+        方法二 进入mysql的控制台后，使用source命令执行
+        Mysql>source 【sql脚本文件的路径全名】 或 Mysql>\. 【sql脚本文件的路径全名】，示例：
+        source d:\test\ss.sql 或者 \. d:\test\ss.sql
+
+---
+
+#### Mysql中插入emoji表情
+
+* 插入Emoji表情，保存到数据库时报错：
+
+        SQLException: Incorrect string value: '\xF0\x9F\x98\x84' for column 'review' at row 1
+        原因：
+        UTF-8编码有可能是两个、三个、四个字节。Emoji表情是4个字节，而Mysql的utf8编码最多3个字节，所以数据插不进去。
+        
+        解决办法：相应的数据库栏位字符集改为：utf8mb4即可
+        
 ---
 
 
