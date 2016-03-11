@@ -192,6 +192,8 @@ excerpt:
 
         默认: 'scrapy.core.scheduler.Scheduler'
         用于爬取的调度器。
+        自定义：
+        SCHEDULER = "smzdm_crawler.scrapy_redis.scheduler.Scheduler"
         
 * 默认的USER_AGENT：USER_AGENT
 
@@ -239,6 +241,14 @@ excerpt:
         使用 genspider 命令创建新spider的模块。
         样例:
         NEWSPIDER_MODULE = 'mybot.spiders_dev'
+
+---
+
+#### 判断设置是否已经启用
+
+* 更改默认设置以后，执行scrapy时，控制台会打印log信息：Overridden settings，即表示修改成功
+
+        2016-03-11 15:12:30 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'smzdm_crawler.spiders', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'SPIDER_MODULES': ['smzdm_crawler.spiders'], 'BOT_NAME': 'smzdm_crawler', 'SCHEDULER': 'smzdm_crawler.scrapy_redis.redis_scheduler.Scheduler', 'DOWNLOAD_DELAY': 0.25}
 
 ---
 

@@ -51,6 +51,19 @@ excerpt:
 
 ---
 
+#### BeautifulSoup相关
+
+* nonetype错误： 有时候网页里明明有的标签却反应找不到，如下一页的链接，可能是因为页面加载的时候没有得到，可以捕捉这个错误，再次加载。
+
+        try: 
+            next_page = selector.find("li", {"class":"next"}).find("a")
+        except AttributeError:
+            print "catch AttributeError"
+            selector = load_content(source_url, method='GET')
+            next_page = selector.find("li", {"class":"next"}).find("a")
+
+---
+
 #### 其他
 
 * [Online JSON Viewer](http://jsonviewer.stack.hu/) 是一个在线解析Json数据的工具，可以把Json格式的数据粘贴进去，查看Json的结构
