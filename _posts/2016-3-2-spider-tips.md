@@ -64,6 +64,60 @@ excerpt:
 
 ---
 
+#### 有关javascripts脚本方面的
+
+* 有些网站是用ajax异步请求生成的页面，直接爬获取不到数据。这个可以通过查看网页源码来判断。在 Google Chrome的开发者工具XHR中可以查看具体的请求资源过程。
+
+* 一部分网站是用post请求来获取数据渲染网页，其中一般会带有加密的关键字段。有些是通过js计算生成的，这个可以查看请求的js文件。js文件可以用一些格式化js的网站来格式化，这样便于分析具体的代码段。如[http://javascript.51240.com/](http://javascript.51240.com/)
+
+* 此外还需要一些javascripts方面的知识：
+
+    jQuery的each方法：
+    如：
+    var arr1 = [[1, 4, 3], [4, 6, 6], [7, 20, 9]]     
+    $.each(arr1, function(i, item){     
+       alert(item[0]);     
+    });     
+    //其实arr1为一个二维数组，item相当于取每一个一维数组，   
+    //item[0]相对于取每一个一维数组里的第一个值   
+    //所以上面这个each输出分别为：1   4   7 
+    
+    js中$.trim()方法：trim函数功能是去掉字符串两端空格符
+    
+    JavaScript location.search 属性用于设置或取得当前 URL 的查询字串（? 符号及后面的部分）：
+    如：
+    URL 是：http://www.5idev.com/p-javascript_location.shtml?part=1
+    location.search就是?part=1
+    
+    JavaScript substr(start,length) 方法可在字符串中抽取从 start 下标开始的指定数目的字符。
+    如：
+    var str="Hello world!"
+    document.write(str.substr(3,7))
+    输出：lo worl
+    
+    JavaScript unescape(string) 函数可对通过 escape() 编码的字符串进行解码。
+    如：
+    var test1="Visit W3School!"
+    test1=escape(test1)
+    document.write (test1 + "<br />")
+    test1=unescape(test1)
+    document.write(test1 + "<br />")
+    输出：
+    Visit%20W3School%21
+    Visit W3School!
+    
+    Python处理HTML转义字符
+    如：对于html = '&lt;abc&gt;'
+    import HTMLParser
+    html_parser = HTMLParser.HTMLParser()
+    txt = html_parser.unescape(html)
+    #这样就得到了txt = '<abc>'
+    反之：
+    import cgi
+    html = cgi.escape(txt) # 这样又回到了 html = '&lt;abc&gt'
+    
+---
+
 #### 其他
 
 * [Online JSON Viewer](http://jsonviewer.stack.hu/) 是一个在线解析Json数据的工具，可以把Json格式的数据粘贴进去，查看Json的结构
