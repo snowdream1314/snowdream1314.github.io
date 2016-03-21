@@ -118,12 +118,30 @@ excerpt:
     
 ---
 
+#### md5加密
+        
+        方法一：
+        import md5
+
+        src = 'this is a md5 test.'   
+        m1 = md5.new()   
+        m1.update(src)   
+        print m1.hexdigest()   
+        
+        方法二：
+        import hashlib   
+
+        m2 = hashlib.md5()   
+        m2.update(src)   
+        print m2.hexdigest()   
+        
+---
+
 #### 其他
 
 * [Online JSON Viewer](http://jsonviewer.stack.hu/) 是一个在线解析Json数据的工具，可以把Json格式的数据粘贴进去，查看Json的结构
   
 ---
-
 
 > 参考文章：[轻松自动化---selenium-webdriver](http://www.cnblogs.com/fnng/p/3193955.html)、[ChromeDriver executable needs to be available in the path](http://stackoverflow.com/questions/26477603/chromedriver-executable-needs-to-be-available-in-the-path)
 
