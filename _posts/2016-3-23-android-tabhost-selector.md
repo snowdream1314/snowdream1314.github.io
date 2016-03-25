@@ -64,46 +64,35 @@ excerpt:
 
 * activity活动代码
 
-        public class MainActivity extends Activity {
+        public class MainActivity extends ActivityGroup {
 	
             private TabHost tabHost;
-            
-            private String title[] = {"公众号", "喜欢", "更多"}; #标签的题目
-            private int image[] = {R.drawable.account_select, R.drawable.like_normal, R.drawable.more_normal};#标签图片
-            private int xml[] = {R.drawable.account_selector, R.drawable.like_selector, R.drawable.more_selector};#标签的selector文件
-            
+
+            private TextView tab_name;
+
             @Override
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
                 
-                initTabView();
-            }
-            
-            private void initTabView() {
+                tab_name = (TextView) findViewById(R.id.tab_name);
                 this.tabHost = (TabHost) findViewById(R.id.mytabhost);
-                tabHost.setup();
+                tabHost.setup(this.getLocalActivityManager());
                 
-                for (int i=0; i<title.length; i++){
-                    //实例化一个view作为标签的布局，R.layout.tab_layout为导航栏的布局
-                    View view = View.inflate(this, R.layout.tab_layout, null);
-                    
-                    //设置imageView/textView
-                    ImageView imageView = (ImageView) view.findViewById(R.id.image);
-                    imageView.setImageDrawable(getResources().getDrawable(xml[i]));
-                    TextView textView = (TextView) view.findViewById(R.id.title);
-                    textView.setText(title[i]);
-                    
-                    
-                    //设置跳转activity
-                    //Intent intent = new Intent(this, MainActivity.class);
-                    
-                    //载入view对象
-                    TabSpec spec = tabHost.newTabSpec(title[i]).setIndicator(view).setContent(R.id.tab);
-                    
-                    //添加到选项卡
-                    tabHost.addTab(spec);
-                }
+                tabHost.addTab(tabHost.newTabSpec("公众号").setIndicator(initView("公众号", R.drawable.account_selector)).setContent(new Intent(this, AccountActivity.class)));
+                tabHost.addTab(tabHost.newTabSpec("喜欢").setIndicator(initView("喜欢", R.drawable.like_selector)).setContent(new Intent(this, LikeActivity.class)));
+                tabHost.addTab(tabHost.newTabSpec("更多").setIndicator(initView("更多", R.drawable.more_selector)).setContent(new Intent(this, MoreActivity.class)));
+                tabHost.setCurrentTab(0);
+                
+            }
+
+            private View initView(String name, int drawableId){
+                View view = View.inflate(this, R.layout.tab_layout, null);
+                ImageView imageView = (ImageView) view.findViewById(R.id.image);
+                TextView textView = (TextView) view.findViewById(R.id.title);
+                imageView.setImageDrawable(getResources().getDrawable(drawableId));
+                textView.setText(name);
+                return view;
             }
         
 ---
@@ -145,7 +134,7 @@ excerpt:
 ---
 
 
-> 参考文章：
+> 参考文章：[Selector中的各种状态详解](http://blog.csdn.net/whyrjj3/article/details/7852761)、[Android Tabhost使用（展示不同的Tab页）](http://blog.csdn.net/renguichao/article/details/7667264)
 
 ---
 
