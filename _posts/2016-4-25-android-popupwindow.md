@@ -62,7 +62,7 @@ excerpt:
 ---
 
 
-> 参考文章：[PopUpWindow使用详解(一)——基本使用](http://blog.csdn.net/harvic880925/article/details/49272285)、[android中popupwindow弹出后，屏幕背景变成半透明](http://blog.csdn.net/chenguang79/article/details/43016519)
+> 参考文章：[PopUpWindow使用详解(一)——基本使用](http://blog.csdn.net/harvic880925/article/details/49272285)、[android中popupwindow弹出后，屏幕背景变成半透明](http://blog.csdn.net/chenguang79/article/details/43016519)、[Popupwindow 完美demo](http://www.tuicool.com/articles/6RZBVvI)
 
 ---
 
