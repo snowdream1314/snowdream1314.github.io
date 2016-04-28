@@ -130,7 +130,7 @@ excerpt:
 
             LinearLayout layout = new LinearLayout(getContext());
             layout.setOrientation(LinearLayout.HORIZONTAL);
-            ProgressBar progressBar = new ProgressBar(getContext());
+             ProgressBar progressBar = new ProgressBar(mContext, null,android.R.attr.progressBarStyleSmall);//定义进度条的样式
             // 进度条显示位置
             progressBar.setPadding(0, 0, 15, 0);
             // 把进度条加入到layout中
