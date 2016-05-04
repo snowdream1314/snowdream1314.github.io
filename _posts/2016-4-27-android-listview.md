@@ -153,8 +153,11 @@ excerpt:
 
         }
 
----
+* 滚回顶部
 
+        在adapter.notifyDataSetChanged();后面加上 merchantList.setSelection(0);
+        
+---
 
 > 参考文章：[FragmentTabHost的应用](http://www.colabug.com/thread-1054253-1-1.html)、[竖型TABHOST](http://www.cnblogs.com/shanzei/archive/2012/04/06/2419367.html)
 
