@@ -29,7 +29,7 @@ icon: glyphicon-heart
 
 ---
 
-###今年目标
+### 今年目标
 
 * 找到一份用python语言的工作，可以是数据挖掘处理爬虫类的，也可以是网站后台开发类的，努力工作深入学习python
 * 上岗一个月内熟练工作的技能，截止2015年12月30号前能做1-2个小项目
@@ -45,7 +45,7 @@ icon: glyphicon-heart
 这个博客主要用于记录我的人生轨迹：包括技术的增长，生活的点滴，去过的远方。。。
 
 2015.7.23  | 用[Gaohaoyang](http://gaohaoyang.github.io/)的模板做了自己的博客。
-2015.5-7   | 辞职，打算转IT行业，当一名程序员，开始自学找工作之旅。先后学了python，Git，爬虫，用Flask搭建博客网站等。
+2014.11月  | 辞职，打算转IT行业，当一名程序员，开始自学找工作之旅。先后学了python，Git，爬虫，用Flask搭建博客网站等。
 
 
  > * 参考书主要有[《Python核心编程》](http://item.jd.com/10062788.html)、[《Flask Web开发：基于Python的Web应用开发实战》](http://item.jd.com/11594082.html)等
