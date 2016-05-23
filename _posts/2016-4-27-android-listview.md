@@ -157,6 +157,31 @@ excerpt:
 
         在adapter.notifyDataSetChanged();后面加上 merchantList.setSelection(0);
         
+        
+* 上拉加载的进度条应该放在listview的adapter的getView方法中
+
+* 关于左右侧滑删除和下拉刷新事件冲突的解决方案：
+
+        在SwipeMenuListView中增加监听滑动事件的监听事件：
+        swipeMenuListView.setOnSwipeListener(new SwipeMenuListView.OnSwipeListener() {
+            @Override
+            public void onSwipeStart(int i) {
+                refreshLayout.setEnabled(false);    //滑动开始时不能下拉刷新
+            }
+
+            @Override
+            public void onSwipeEnd(int i) {
+                refreshLayout.setEnabled(true);     //滑动结束后可以下拉刷新
+            }
+        });
+        
+---
+
+#### listview点击事件失效
+
+        在listview的item中包含有可点击的子控件时，就可能产生listview没法点击的情况.自定义ListViewItem中有Button或者Checkable的子类控件的话，那么默认focus是交给了子控件，而ListView的Item能被选中的基础是它能获取Focus.
+        解决办法：对ItemLayout的根控件设置其android:descendantFocusability=”blocksDescendant”即可
+
 ---
 
 > 参考文章：[FragmentTabHost的应用](http://www.colabug.com/thread-1054253-1-1.html)、[竖型TABHOST](http://www.cnblogs.com/shanzei/archive/2012/04/06/2419367.html)
