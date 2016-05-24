@@ -1,54 +1,55 @@
 ---
 layout: about
-title: 
+title: About
 permalink: /about/
 icon: glyphicon-heart
 ---
 
-## 联系方式
+### 关于我
 
-- 手机： 18758554386（```杭州```）
-- Email：595968602@qq.com
+> 2015年我将进入IT行业，做一名程序员。Small Small Programmer,Big Big Dream！   
 
-## 个人信息
+毕业于浙江工业大学机电一体化专业。经过2年工作摸索，终于找到自己的职业方向，已经自学3个月，正在找工作，即将加入挨踢（IT）行列！   
 
- - 徐晓庆/男/1990 
- - 本科/浙江工业大学 
- - 工作年限：2年
- - 技术博客：http://snowdream1314.github.io/
- - GitHub：  https://github.com/snowdream1314
- - 期望职位：Android程序员
- - 期望薪资：面议
- - 期望城市：北京
- - 目前坐标：杭州
- 
-## 工作经历
+对于智能家居、人工智能、机器学习和大数据很感兴趣。算法的重要性深入我心。   
 
-### 杭州彩铂网络科技有限公司 （ 2014年5月 ~ 现在 ）
+热爱大自然，热爱户外运动，热爱爬山、骑行、旅游。
 
-#### 福利多APP ——为广大用户收集红包和其他各种优惠福利的神器
-作为核心程序员，我完成了用户中心所有模块以及购物清单和商家详情的设计和开发，并不断优化代码，显著提升了用户中心模块的可扩展性和复用性，几次设计稿更改都能很快更新代码。期间阅读了多个GitHub上的开源插件的源码并成功应用到项目中，熟悉了客户端用户注册、改密、绑定手机、个性设置等用户中心相关的业务逻辑和实现方法。
+最喜欢看科幻片，特别钟爱《Iron Man》系列里的人工智能————贾维斯！  
 
-#### 微信汇APP ——帮用户发现更多更好的微信公众号
-微信汇APP 汇聚了数十个类目、数万个精彩的微信号，作为唯一的开发人员，我独自完成了所有的功能模块的开发工作，期间除了熟悉Java语言，、XML、JSON数据的结构和解析等基础，还进一步熟悉了Android数据存储、多线程间通信、事件分发机制等基本原理，积累了网络图片加载，ListView事件冲突、下拉刷新、滚动到底部加载更多、侧滑删除等常用功能的一些实现和优秀的开源插件的使用经验。
-
-#### 天气助手APP
-天气助手APP是我的第一个APP，实现了天气预报、空气质量预报的基本功能，可以定制和管理多个城市的天气预报，期间熟悉了Android软件的基本组成和开发流程，PhotoShop切图，Android四大组件、基本布局、Activity、Fragment生命周期，以及基本的数据存储、ViewPager的用法。
-
-#### 针对国内外数十家优惠网站的Python爬虫
-利用Python语言、Scrapy爬虫框架、MongoDB和MySQL数据库，编写了一个针对国内外数十家优惠信息网站的爬虫，每天下载近百万的有效信息。此外还熟悉了Linux常用的一些工具和方法，熟悉了网页结构和前端Html、CSS以及JavaScript相关的知识，同时分别用Django和Flask框架编写了简单的博客。
-
-## 技能清单
-
-- 编程语言：Python，Java
-- 开发工具：Eclipse，Android Studio
-- 版本管理：Svn/Git
-- 数据库相关：MySQL/MongoDB/SQLite
-- 第三方开源组件：SwipeMenuListView、Android-Universal-Image-Loader、PagerSlidingTabStrip、ImagePicker 、PermissionsDispatcher等
-- 前端相关：熟悉Html、CSS以及JavaScript
-- Linux基础：基础操作，定时任务、远程登录、后台运行等常见命令操作
+喜欢看书，视野决定看问题角度。  
 
 ---
 
-## 致谢
-感谢您花时间阅读我的简历，期待能有机会和您共事。
+### 联系我
+
+* GitHub: [Xuxiaoqing](http://github.com/snowdream1314)
+* email：[595968602@qq.com](mailto:{{ site.email }})
+* 知乎：[Xuxiaoqing](http://www.zhihu.com/people/snowdream-54)
+
+---
+
+### 今年目标
+
+* 找到一份用python语言的工作，可以是数据挖掘处理爬虫类的，也可以是网站后台开发类的，努力工作深入学习python
+* 上岗一个月内熟练工作的技能，截止2015年12月30号前能做1-2个小项目
+* 恶补计算机专业知识，先从数据结构和算法开始
+* 关注Github上的优秀源码
+* 更新博客，包括学习笔记，工作心得，随感随想，明年计划；更新博客页面，学习一些前端的知识，做出属于自己的博客
+* 待增加...
+
+---
+
+### 关于本站   
+
+这个博客主要用于记录我的人生轨迹：包括技术的增长，生活的点滴，去过的远方。。。
+
+2015.7.23  | 用[Gaohaoyang](http://gaohaoyang.github.io/)的模板做了自己的博客。
+2014.11月  | 辞职，打算转IT行业，当一名程序员，开始自学找工作之旅。先后学了python，Git，爬虫，用Flask搭建博客网站等。
+
+
+ > * 参考书主要有[《Python核心编程》](http://item.jd.com/10062788.html)、[《Flask Web开发：基于Python的Web应用开发实战》](http://item.jd.com/11594082.html)等
+>
+ > * 参考网站主要有[知乎](http://www.zhihu.com/)、[开源中国](http://www.oschina.net/)、[笨办法学 Python](http://www.2cto.com/shouce/Pythonbbf/index.html)、[廖雪峰的官方网站](http://www.liaoxuefeng.com/)、[W3School](http://www.w3school.com.cn/h.asp)等 
+>
+---
