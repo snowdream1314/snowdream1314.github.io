@@ -30,6 +30,9 @@
 #### 针对国内外数十家优惠网站的Python爬虫
 利用Python语言、Scrapy爬虫框架、MongoDB和MySQL数据库，编写了一个针对国内外数十家优惠信息网站的爬虫，每天下载近百万的有效信息。此外还熟悉了Linux常用的一些工具和方法，熟悉了网页结构和前端Html、CSS以及JavaScript相关的知识，同时分别用Django和Flask框架编写了简单的博客。
 
+
+
+
 ## 技能清单
 
 - 编程语言：Python，Java
