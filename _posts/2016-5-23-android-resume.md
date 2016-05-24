@@ -1,0 +1,56 @@
+---
+
+# 联系方式
+
+- 手机： 18758554386（```杭州```）
+- Email：595968602@qq.com
+
+---
+
+# 个人信息
+
+ - 徐晓庆/男/1990 
+ - 本科/浙江工业大学 
+ - 工作年限：2年
+ - 技术博客：http://snowdream1314.github.io/
+ - GitHub：https://github.com/snowdream1314
+
+ - 期望职位：Android程序员
+ - 期望薪资：面议
+ - 期望城市：北京
+ - 目前坐标：杭州
+
+---
+
+# 工作经历
+
+## 杭州彩铂网络科技有限公司 （ 2014年5月 ~ 现在 ）
+
+### 福利多APP 
+福利多APP是一款为广大用户收集红包和其他各种优惠福利的神器，作为核心程序员，我完成了用户中心所有模块以及购物清单和商家详情的设计和开发，并不断优化代码，显著提升了用户中心模块的可扩展性和复用性，几次设计稿更改都能很快更新代码。期间阅读了多个GitHub上的开源插件的源码并成功应用到项目中，更加熟悉XML、JSON数据的结构和解析。
+
+
+### 微信汇APP 
+微信汇APP 汇聚了数十个类目、数万个精彩的微信号，是一款帮用户发现更多更好的微信公众号的APP，作为唯一的开发人员，我在一个月内完成了所有的功能模块的开发工作，期间熟悉了Java语言，PhotoShop切图，Android SDK相关知识，Android四大组件、基本布局、活动生命周期、数据存储和通信、事件分发机制等基本原理，积累了图片加载，网络异步加载，ListView下拉刷新、滚动到底部加载更多、侧滑删除等常用功能的一些实现和优秀的开源插件的使用经验。
+
+
+### 针对国内外数十家优惠网站的Python爬虫
+利用Python语言、Scrapy爬虫框架、MongoDB和MySQL数据库，编写了一个针对国内外数十家优惠信息网站的爬虫。此外还熟悉了Linux常用的一些工具和方法，熟悉了网页结构和前端Html、CSS以及JavaScript相关的知识，同时分别用Django和Flask框架编写了简单的博客。
+
+
+---
+
+# 技能清单
+
+- 编程语言：Python，Java
+- 开发工具：Eclipse，Android Studio
+- 版本管理：Svn/Git
+- 数据库相关：MySQL/MongoDB/SQLite
+- 第三方开源组件：SwipeMenuListView、Android-Universal-Image-Loader、PagerSlidingTabStrip、ImagePicker 、PermissionsDispatcher等
+- 前端相关：熟悉Html、CSS以及JavaScript
+- Linux基础：基础操作，定时任务、远程登录、后台运行等常见命令操作
+
+---
+
+# 致谢
+感谢您花时间阅读我的简历，期待能有机会和您共事。
