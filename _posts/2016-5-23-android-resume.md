@@ -33,7 +33,7 @@
 
 ## 技能清单
 
-- 编程语言：Python，Java, C 
+- 编程语言：Python，Java，C 
 - 开发工具：Eclipse，Android Studio
 - 版本管理：Svn/Git
 - 数据库相关：MySQL/MongoDB/SQLite
