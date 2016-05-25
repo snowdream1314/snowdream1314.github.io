@@ -10,7 +10,7 @@
  - 工作年限：2年
  - 技术博客：http://snowdream1314.github.io/
  - GitHub：  https://github.com/snowdream1314
- - 期望职位：Android程序员
+ - 期望职位：Android开发工程师
  - 期望薪资：面议
  - 期望城市：北京
  - 目前坐标：杭州
