@@ -41,7 +41,7 @@
 - 开发工具：Eclipse，Android Studio
 - 版本管理：Svn/Git
 - 数据库相关：MySQL/MongoDB/SQLite
-- 第三方开源组件：SwipeMenuListView、Android-Universal-Image-Loader、okhttp、PermissionsDispatcher等
+- 关注的开源项目：scikit-learn、android-open-project、jieba等
 - 前端相关：熟悉Html、CSS以及JavaScript
 - Linux基础：基础操作，定时任务、远程登录、后台运行等常见命令操作
 
