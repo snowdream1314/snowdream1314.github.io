@@ -7,7 +7,7 @@
 
  - 徐晓庆/男/1990 
  - 本科/浙江工业大学 
- - 工作年限：2年多
+ - 工作年限：2年3个月
  - 技术博客：http://snowdream1314.github.io/
  - GitHub：  https://github.com/snowdream1314
  - 期望职位：Android开发工程师
