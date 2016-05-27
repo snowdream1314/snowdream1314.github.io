@@ -10,17 +10,17 @@
  - 工作年限：2年
  - 技术博客：http://snowdream1314.github.io/
  - GitHub：  https://github.com/snowdream1314
- - 期望职位：Android程序员
+ - 期望职位：Android开发工程师
  - 期望薪资：面议
  - 期望城市：北京
  - 目前坐标：杭州
  
 ## 工作经历
 
-### 杭州彩铂网络科技有限公司 （ 2014年5月 ~ 现在 ）
+### 杭州彩铂网络科技有限公司 （ 2014年5月 —— 现在 ）
 
 #### 福利多APP ——为广大用户收集红包和其他各种优惠福利的神器
-作为核心程序员，我完成了用户中心所有模块以及购物清单和商家详情的设计和开发，并不断优化代码，显著提升了用户中心模块的可扩展性和复用性，几次设计稿更改都能很快更新代码。期间阅读了多个GitHub上的开源插件的源码并成功应用到项目中，熟悉了客户端用户注册、改密、绑定手机、个性设置等用户中心相关的业务逻辑和实现方法。
+福利多是公司核心产品，已经上线各大应用市场。作为核心程序员，我完成了用户中心所有模块以及购物清单和商家详情的设计和开发，并不断优化代码，显著提升了用户中心模块的可扩展性和复用性，几次设计稿更改都能很快更新代码。期间阅读了多个GitHub上的开源插件的源码并成功应用到项目中，熟悉了客户端用户注册、改密、绑定手机、个性设置等用户中心相关的业务逻辑和实现方法。
 
 #### 微信汇APP ——帮用户发现更多更好的微信公众号
 微信汇APP 汇聚了数十个类目、数万个精彩的微信号，作为唯一的开发人员，我独自完成了所有的功能模块的开发工作，期间除了熟悉Java语言，、XML、JSON数据的结构和解析等基础，还进一步熟悉了Android数据存储、多线程间通信、事件分发机制等基本原理，积累了网络图片加载，ListView下拉刷新、滚动到底部加载更多、侧滑删除等常用功能的一些实现和优秀的开源插件的使用经验。
@@ -33,11 +33,11 @@
 
 ## 技能清单
 
-- 编程语言：Python，Java
+- 编程语言：Python，Java，C 
 - 开发工具：Eclipse，Android Studio
 - 版本管理：Svn/Git
 - 数据库相关：MySQL/MongoDB/SQLite
-- 第三方开源组件：SwipeMenuListView、Android-Universal-Image-Loader、PagerSlidingTabStrip、ImagePicker 、PermissionsDispatcher等
+- 第三方开源组件：SwipeMenuListView、Android-Universal-Image-Loader、okhttp、PermissionsDispatcher等
 - 前端相关：熟悉Html、CSS以及JavaScript
 - Linux基础：基础操作，定时任务、远程登录、后台运行等常见命令操作
 
