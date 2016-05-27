@@ -177,6 +177,12 @@ excerpt:
         
 ---
 
+#### ScrollView 滚回顶部
+
+        scrollView.fullScroll(View.FOCUS_UP);
+
+---
+
 #### listview点击事件失效
 
         在listview的item中包含有可点击的子控件时，就可能产生listview没法点击的情况.自定义ListViewItem中有Button或者Checkable的子类控件的话，那么默认focus是交给了子控件，而ListView的Item能被选中的基础是它能获取Focus.
