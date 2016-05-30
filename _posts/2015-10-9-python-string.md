@@ -63,9 +63,9 @@ excerpt:
  * 格式化相关
  
         获取固定长度，右对齐，左边不够用空格补齐：str.ljust(width)
-        获取固定长度，左对齐，右边不够用空格补齐：str.ljust(width)
-        获取固定长度，中间对齐，两边不够用空格补齐：str.ljust(width)
-        获取固定长度，右对齐，左边不足用0补齐
+        获取固定长度，左对齐，右边不够用空格补齐：str.rjust(width)
+        获取固定长度，中间对齐，两边不够用空格补齐：str.center(width)
+        获取固定长度，右对齐，左边不足用0补齐:      str.zfill(width)
         print '%s ljust=%s' % (str,str.ljust(20))
         print '%s rjust=%s' % (str,str.rjust(20))
         print '%s center=%s' % (str,str.center(20))
@@ -105,7 +105,7 @@ excerpt:
         str='python String function'
         print '%s strip=%s' % (str,str.strip('d'))
 
- * 按指定字符分割字符串为数组：str.split(' ')
+ * 按指定字符分割字符串为数组：str.split('')
 
  * 默认按空格分隔
  
