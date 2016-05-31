@@ -9,7 +9,7 @@ excerpt:
 * content
 {:toc}
 
-###记录用到的Python内建函数
+### 记录用到的Python内建函数
 
 ---
 

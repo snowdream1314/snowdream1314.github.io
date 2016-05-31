@@ -17,11 +17,12 @@ excerpt:
 
 * python中使用urlparse包中的urlparse方法来解析url
 
-* urlparse模块主要是把url拆分为6部分，并返回元组。并且可以把拆分后的部分再组成一个url。主要有函数有urljoin、urlsplit、urlunsplit、urlparse等。
+* urlparse模块主要是把url拆分为6部分，并返回元组。并且可以把拆分后的部分再组成一个url。主要函数有urljoin、urlsplit、urlunsplit、urlparse等。
 
 * urlparse.urlparse(urlstring[, scheme[, allow_fragments]])将urlstring解析成6个部分，它从urlstring中取得URL，并返回元组 (scheme, netloc, path, parameters, query, fragment)，但是实际上是基于namedtuple，是tuple的子类。它支持通过名字属性或者索引访问的部分URL，每个组件是一串字符，也有可能是空的。组件不能被解析为更小的部分，%后面的也不会被解析，分割符号并不是解析结果的一部分，除非用斜线转义，注意，返回的这个元组非常有用，例如可以用来确定网络协议(HTTP、FTP等等 )、服务器地址、文件路径，等等。
 
 * 例如：
+
         import urlparse
         
         url=urlparse.urlparse('http://www.baidu.com/index.php?username=guol')
@@ -30,7 +31,7 @@ excerpt:
         >>> print url.netloc
         www.baidu.com
 
-* urlparse 还可以编码解码URL。以get方式提交数据的时候，会在url中添加key=value这样的字符串，所以在value中是不允许有’='，因此要对其进行编码；与此同时服务器接收到这些参数的时候，要进行解码，还原成原始的数据。在爬取网站信息的时候，有时候要获取URL里的信息，就可以用urlparse方法
+* urlparse 还可以编码解码URL。以get方式提交数据的时候，会在url中添加key=value这样的字符串，所以在value中是不允许有'='，因此要对其进行编码；与此同时服务器接收到这些参数的时候，要进行解码，还原成原始的数据。在爬取网站信息的时候，有时候要获取URL里的信息，就可以用urlparse方法
 
         import urlparse
         from urlparse import unquote
