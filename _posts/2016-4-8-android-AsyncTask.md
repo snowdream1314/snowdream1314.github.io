@@ -120,6 +120,115 @@ excerpt:
 
 ---
 
+#### 带post请求和get请求的AsyncTask
+
+        private void connect(final String url, final Map<String, String> params, final int request_type, final byte[] imageData, final String imagePrefix){
+        
+            //params是参数列表，imageData是Bitmap转换成的字节数组，imagePrefix是图片后缀，如png、jpg等
+
+            new AsyncTask<String, Void, String>() {
+
+                @Override
+                protected void onPreExecute() {
+                    super.onPreExecute();
+                }
+
+                @Override
+                protected String doInBackground(String... param) {
+
+                    OkHttpClient client = new OkHttpClient();       //OkHttp3
+
+                    Request request = null;
+                    if(request_type==GET){
+
+                        request = new Request.Builder()
+                                .url(url)
+                                .build();
+                    }else if(request_type==POST){
+
+                        MultipartBody.Builder bodyBuilder = new MultipartBody.Builder();
+                        bodyBuilder.setType(MultipartBody.FORM);
+                        for (Map.Entry<String, String> entry : params.entrySet()) {
+                            bodyBuilder.addFormDataPart(entry.getKey(),entry.getValue());
+                        }
+                        if(imageData!=null && imageData.length>0){
+                            String prefix = imagePrefix;
+                            String mimeType = "image/png";
+                            if("png".equals(prefix)){
+                                mimeType = "image/png";
+                            }else if("jpg".equals(prefix)||"jpeg".equals(prefix)){
+                                mimeType = "image/jpeg";
+                            }else if("gif".equals(prefix)){
+                                mimeType = "image/gif";
+                            }
+                            bodyBuilder.addFormDataPart("myfile", "temp."+prefix, RequestBody.create(MediaType.parse(mimeType), imageData));
+                        }
+
+                        RequestBody formBody = bodyBuilder.build();
+                        request = new Request.Builder()
+                                .url(url)
+                                .post(formBody)
+                                .build();
+
+    //                    FormBody.Builder bodyBuilder = new FormBody.Builder();
+    //                    for (Map.Entry<String, String> entry : params.entrySet()) {
+    //                        bodyBuilder.add(entry.getKey(),entry.getValue());
+    //                    }
+    //                    RequestBody formBody = bodyBuilder.build();
+    //                    request = new Request.Builder()
+    //                            .url(url)
+    //                            .post(formBody)
+    //                            .build();
+                    }else{
+                        return null;
+                    }
+
+                    Response response = null;
+                    String result = null;
+                    try {
+                        response = client.newCall(request).execute();
+                        if(response!=null && response.isSuccessful()) {
+                            result = response.body().string();
+                        }else {
+                            return "0";
+                        }
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    return result;
+                }
+
+
+                @Override
+                protected void onPostExecute(String result) {
+                    super.onPostExecute(result);
+
+                    if("0".equals(result)) {
+                        if(delegate!=null){
+                            delegate.receiveFail(DataUtil.this, "网络链接失败，请稍后重试");
+                        }
+                    }else if(result==null) {
+                        if(delegate!=null){
+                            delegate.receiveFail(DataUtil.this, "数据请求有误，请重试");
+                        }
+                    }else{
+                        if (delegate != null) {
+                            delegate.receiveSuccess(DataUtil.this, result);
+                        }
+                    }
+                }
+            }.execute();
+        }
+        
+        //将Bitmap转换成字节数组
+        public static byte[] Bitmap2Bytes(Bitmap bm) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
+            return baos.toByteArray();
+        }
+
+---
+
 
 > 参考文章：
 
