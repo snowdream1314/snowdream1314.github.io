@@ -49,9 +49,9 @@ excerpt:
     原因：在项目工程中引用第三方包时编译产生的错误。先生的原因是项目工程中和引用的第三方包中都用到了support-v4这个依赖
     解决办法： 将第三方的依赖改成和项目中的support-v4一样，然后在项目工程中剔除support-v4：
     
-    compile ('com.android.support:support-v4:23.3.0') {
-        exclude module: 'support-v4'
-    }
+        compile ('com.android.support:support-v4:23.3.0') {
+            exclude module: 'support-v4'
+        }
     
     clean并rebuild工程
     
