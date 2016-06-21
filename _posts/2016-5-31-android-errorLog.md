@@ -25,6 +25,31 @@ excerpt:
 
 ---
 
+#### 引用依赖冲突
+
+* 1.dexDebug ExecException finished with non-zero exit value 2
+
+    需要在gradle中配置下面的代码，原因是引用了多个libraries文件
+
+    defaultConfig {
+            multiDexEnabled true
+    }
+    
+* 2.Execution failed for task ':app:transformClassesWithJarMergingForDebug'.
+> com.android.build.api.transform.TransformException: java.util.zip.ZipException: duplicate entry: android/support/v4/app/BackStackState$1.class
+
+    原因：在项目工程中引用第三方包时编译产生的错误。先生的原因是项目工程中和引用的第三方包中都用到了support-v4这个依赖
+    解决办法： 将第三方的依赖改成和项目中的support-v4一样，然后在项目工程中剔除support-v4：
+    compile ('com.android.support:support-v4:23.3.0') {
+        exclude module: 'support-v4'
+    }
+    clean并rebuild工程
+    
+    很多其他的三方包会引用到support-v4，都要剔除掉。其他的可能冲突的包也要注意，引用进工程的时候要注意是否冲突，要遵循引用唯一的原则。
+
+
+---
+
 > 参考文章：
 
 ---
