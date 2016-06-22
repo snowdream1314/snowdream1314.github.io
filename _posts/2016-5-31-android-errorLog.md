@@ -60,6 +60,20 @@ excerpt:
 
 ---
 
+#### Error:(2, 0) Plugin with id ‘com.github.dcendents.android-maven’ not found解决办法
+
+* 在项目的project 的 build.gradle 添加如下代码
+
+        dependencies {
+            classpath 'com.android.tools.build:gradle:2.1.0'
+
+            classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+            classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+
+        }
+
+---
+
 > 参考文章：
 
 ---
