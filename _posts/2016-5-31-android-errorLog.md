@@ -33,6 +33,59 @@ excerpt:
 
 ---
 
+#### 引用依赖冲突
+
+* 1.dexDebug ExecException finished with non-zero exit value 2
+
+    需要在gradle中配置下面的代码，原因是引用了多个libraries文件
+
+    defaultConfig {
+            multiDexEnabled true
+    }
+    
+* 2.Execution failed for task ':app:transformClassesWithJarMergingForDebug'.
+> com.android.build.api.transform.TransformException: java.util.zip.ZipException: duplicate entry: android/support/v4/app/BackStackState$1.class
+
+    原因：在项目工程中引用第三方包时编译产生的错误。先生的原因是项目工程中和引用的第三方包中都用到了support-v4这个依赖
+    解决办法： 将第三方的依赖改成和项目中的support-v4一样，然后在项目工程中剔除support-v4：
+    
+        compile ('com.android.support:support-v4:23.3.0') {
+            exclude module: 'support-v4'
+        }
+    
+    clean并rebuild工程
+    
+    很多其他的三方包会引用到support-v4，都要剔除掉。其他的可能冲突的包也要注意，引用进工程的时候要注意是否冲突，要遵循引用唯一的原则。
+
+
+---
+
+#### Error:(2, 0) Plugin with id ‘com.github.dcendents.android-maven’ not found解决办法
+
+* 在项目的project 的 build.gradle 添加如下代码
+
+        dependencies {
+            classpath 'com.android.tools.build:gradle:2.1.0'
+
+            classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+            classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+
+        }
+
+---
+
+#### Error:Cause: org/gradle/api/publication/maven/internal/DefaultMavenFactory
+
+* 当你使用的Gradle版本是2.4以上，Android插件版本是1.3.0以上的时候就会出现这个问题，这时候你只需将android-maven-gradle-plugin插件版本改为classpath ‘com.github.dcendents:android-maven-gradle-plugin:1.3’即可
+
+---
+
+#### Execution failed for task ':library-EnhancedPullToRefreshListView:javadoc'.
+
+* 最后查出来是项目中用了中文注释的原因，删掉中文注释或者改成英文就OK了
+
+---
+
 > 参考文章：
 
 ---
