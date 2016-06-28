@@ -74,6 +74,12 @@ excerpt:
 
 ---
 
+#### Error:Cause: org/gradle/api/publication/maven/internal/DefaultMavenFactory
+
+* 当你使用的Gradle版本是2.4以上，Android插件版本是1.3.0以上的时候就会出现这个问题，这时候你只需将android-maven-gradle-plugin插件版本改为classpath ‘com.github.dcendents:android-maven-gradle-plugin:1.3’即可
+
+---
+
 > 参考文章：
 
 ---
