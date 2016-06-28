@@ -80,6 +80,12 @@ excerpt:
 
 ---
 
+#### Execution failed for task ':library-EnhancedPullToRefreshListView:javadoc'.
+
+* 最后查出来是项目中用了中文注释的原因，删掉中文注释或者改成英文就OK了
+
+---
+
 > 参考文章：
 
 ---
