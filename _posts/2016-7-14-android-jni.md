@@ -13,6 +13,8 @@ excerpt:
 
 ### Android studio 下的Jni开发
 
+* Android 很容易被反编译，一些关键性的加密字符串什么的可以利用Jni，提高安全性。
+
 ---
 
 #### 直接使用.so文件
