@@ -149,21 +149,21 @@ excerpt:
         
         //dialog属性样式
         <style name="dialog_tran" parent="android:style/Theme.Dialog">
-            <item name="android:windowFrame">@null</item>
-            <item name="android:windowNoTitle">true</item>
-            <item name="android:windowBackground">@android:color/transparent</item>
-            <item name="android:windowIsFloating">false</item>
-            <item name="android:windowContentOverlay">@null</item>
-            <item name="android:windowIsTranslucent">true</item>
-            <item name="android:backgroundDimEnabled">false</item>
-            <item name="android:backgroundDimAmount">0.6</item>
+            <item name="android:windowFrame">@null</item>   <!-- 边框 -->
+            <item name="android:windowNoTitle">true</item>  <!-- 没有标题 -->
+            <item name="android:windowBackground">@android:color/transparent</item>                 <!-- 对话框的内容窗口背景色 -->
+            <item name="android:windowIsFloating">false</item>  <!-- 是否浮现在activity之上 -->
+            <item name="android:windowContentOverlay">@null</item>  <!-- 是否有覆盖 -->
+            <item name="android:windowIsTranslucent">true</item>    <!-- 背景透明 -->
+            <item name="android:backgroundDimEnabled">false</item>  //背景变暗
+            <item name="android:backgroundDimAmount">0.6</item>                 <!-- 整个屏幕背景的灰度值 -->
         </style>
 
         <style name="sale_coupon_dialog" parent="dialog_tran">
             //dialog背景
             <item name="android:windowBackground">@drawable/shape_sale_coupondialog_background</item>
-            <item name="android:backgroundDimEnabled">true</item>
-            <item name="android:windowIsTranslucent">false</item>
+            <item name="android:backgroundDimEnabled">true</item>   //背景变暗
+            <item name="android:windowIsTranslucent">false</item>   //半透明
         </style>
 
 
