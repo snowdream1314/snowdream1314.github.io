@@ -86,6 +86,14 @@ excerpt:
 
 ---
 
+#### Android Studio 预览(preview)报错 Exception raised during rendering: com/android/util/PropertiesMap
+
+* 报错原因：升级了SDK到7.0后，没有下载完全
+
+* 修改下预览右上角对应的SDK版本，改到6.0后正常显示
+
+---
+
 > 参考文章：
 
 ---
