@@ -94,6 +94,15 @@ excerpt:
 
 ---
 
+#### android.database.CursorIndexOutOfBoundsException: Index -1 requested, with a size of 4
+
+* 报错原因：游标越界
+        
+        解决办法：将游标指向第一条
+        cursor.moveToFirst()
+
+---
+
 > 参考文章：
 
 ---
