@@ -12,6 +12,8 @@ icon: glyphicon-heart
  - 技术博客：http://snowdream1314.github.io/
  - GitHub：  https://github.com/snowdream1314
  - 期望职位：Android开发工程师  
+ - phone：18758554386
+ - email：[xxq2dream@gmail.com](mailto:{{ site.email }})
 
 用C写过单片机，用Python写过爬虫，目前正在写Android App。有点完美主义，追求代码简洁高效。个人认为学习能力很重要，爬虫就是自学Python写的。业余喜欢看书、旅行。短期目标是参与开发一款有大规模用户且广受好评的App。
 
@@ -36,13 +38,6 @@ icon: glyphicon-heart
 #### 针对国内外数十家优惠网站的Python爬虫
 
 利用Python语言、Scrapy爬虫框架、MongoDB和MySQL数据库，编写了一个针对国内外数十家优惠信息网站的爬虫，每天下载近百万的有效信息。此外还熟悉了Eclipse开发工具，Linux常用的一些工具和方法，熟悉了网页结构和前端Html、CSS以及JavaScript相关的知识，同时分别用Django和Flask框架编写了简单的博客。
-
----
-
-### 联系我
-
-* phone：18758554386
-* email：[xxq2dream@gmail.com](mailto:{{ site.email }})
 
 ---
 
