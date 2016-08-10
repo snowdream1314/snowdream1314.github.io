@@ -13,7 +13,7 @@ icon: glyphicon-heart
  - GitHub：  https://github.com/snowdream1314
  - 期望职位：Android开发工程师  
  - phone：18758554386
- - QQ   : 595968602
+ - QQ: 595968602
  - email：xxq2dream@gmail.com
 
 用C写过单片机，用Python写过爬虫，目前正在写Android App。有点完美主义，追求代码简洁高效。个人认为学习能力很重要，爬虫就是自学Python写的。业余喜欢看书、旅行。短期目标是参与开发一款有大规模用户且广受好评的App。
