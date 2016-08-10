@@ -214,6 +214,38 @@ excerpt:
 
 ---
 
+#### ViewHolder提升ListView效率
+
+        public class ViewHolder {
+
+            // I added a generic return type to reduce the casting noise in client code
+            @SuppressWarnings("unchecked")
+            public static <T extends View> T get(View view, int id) {
+                SparseArray<View> viewHolder = (SparseArray<View>) view.getTag();
+                if (viewHolder == null) {
+                    viewHolder = new SparseArray<View>();
+                    view.setTag(viewHolder);
+                }
+                View childView = viewHolder.get(id);
+                if (childView == null) {
+                    childView = view.findViewById(id);
+                    viewHolder.put(id, childView);
+                }
+                return (T) childView;
+            }
+        }
+        
+        //listView里使用
+        if(convertView==null){
+                    convertView = LayoutInflater.from(mContext).inflate(R.layout.merchant_cell_deal, parent, false);
+                }
+
+        Deal deal = deals.get(position);
+
+        ImageView dealTagImageView = (ImageView) ViewHolder.get(convertView, R.id.iv_deal_tag);
+
+---
+
 > 参考文章：[FragmentTabHost的应用](http://www.colabug.com/thread-1054253-1-1.html)、[竖型TABHOST](http://www.cnblogs.com/shanzei/archive/2012/04/06/2419367.html)
 
 ---

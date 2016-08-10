@@ -56,6 +56,9 @@ excerpt:
                 WindowManager.LayoutParams lp = dialogWindow.getAttributes();
                 lp.width = LinearLayout.LayoutParams.WRAP_CONTENT;
                 lp.height = LinearLayout.LayoutParams.WRAP_CONTENT;
+                
+                //dialogWindow.setGravity(Gravity.BOTTOM);    //显示在底部
+                
                 dialogWindow.setAttributes(lp);
                 
                 //dialog布局

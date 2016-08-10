@@ -133,6 +133,61 @@ excerpt:
 
 ---
 
+#### 切换tab标签监听
+        
+* 通过在mainactivity的布局中加入按钮就可以实现悬浮在fragment上的效果
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:divider="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="#FFFBFBFB"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"/>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@android:id/tabs"
+                android:layout_weight="1"
+                android:background="#FFF4F4F4"
+                >
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/bt_shopcart"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@mipmap/btn_nav_shopcart"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_above="@android:id/tabs"
+                />
+        </RelativeLayout>
+        
+* 切换tab标签监听
+
+        fragmentTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String s) {
+                FLDLog.e("mainactivity--onTabChanged:" + s);
+                if (s.equals("mine")) {
+                    shopcart.setVisibility(View.GONE);
+                }else {
+                    shopcart.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+---
+
 
 > 参考文章：[Selector中的各种状态详解](http://blog.csdn.net/whyrjj3/article/details/7852761)、[Android Tabhost使用（展示不同的Tab页）](http://blog.csdn.net/renguichao/article/details/7667264)
 
