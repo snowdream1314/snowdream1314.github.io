@@ -38,6 +38,8 @@ icon: glyphicon-heart
 真会买APP是我独立负责的第二个APP，收集淘宝和天猫的各种优惠商品提供给用户，并且集成了阿里巴巴的阿里百川SDK，可以直接关联淘宝购物。同时集成了信鸽推送和友盟统计， 便于向用户提供更好的服务。
 
 * 集成阿里百川电商SDK
+* 图片加滤镜得到灰色图片，Activity进出动画
+* ListView加载优化，UI布局优化
 * Android Studio + SVN
  
 > 微信汇APP ——帮用户发现更多更好的微信公众号
@@ -45,6 +47,8 @@ icon: glyphicon-heart
 微信汇APP 汇聚了数十个类目、数万个精彩的微信号，作为唯一的开发人员，我完成了从业务逻辑分析、代码架构设计到功能模块的实现的整个开发流程，期间除了熟悉Java语言，、XML、JSON数据的结构和解析等基础，还进一步熟悉了Android数据存储、多线程间通信、事件分发机制等基本原理，积累了网络图片加载，ListView下拉刷新、滚动到底部加载更多、侧滑删除等常用功能的一些实现和优秀的开源插件的使用经验。
 
 * AsyncTask + okhttp网络请求，XML、JSON数据的解析
+* ListView嵌套GridView
+* 跳转第三方应用，如微信等
 * Android Studio/Eclipse + SVN
 
 > 针对国内外数十家优惠网站的Python爬虫
@@ -52,8 +56,9 @@ icon: glyphicon-heart
 利用Python语言、Scrapy爬虫框架、MongoDB和MySQL数据库，编写了一个针对国内外数十家优惠信息网站的爬虫，每天下载近百万的有效信息。此外还熟悉了Eclipse开发工具，Linux常用的一些工具和方法，熟悉了网页结构和前端Html、CSS以及JavaScript相关的知识，同时分别用Django和Flask框架编写了简单的博客。
 
 * python语言 + Scrapy爬虫框架 + MongoDB数据库
-* 前端相关Html、CSS以及JavaScript
+* 前端相关Html、CSS以及JavaScript，网页结构分析，数据提取
 * Eclipse + Git
+* Linux基础：基础操作，定时任务、远程登录、后台运行等常见命令操作
 
 ---
 
