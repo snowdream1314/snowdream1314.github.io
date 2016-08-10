@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: 
 permalink: /about/
 icon: glyphicon-heart
 ---
@@ -22,6 +22,6 @@ icon: glyphicon-heart
 ### 联系我
 
 * GitHub: [Xuxiaoqing](http://github.com/snowdream1314)
-* email：[xxq2dream@gmail.cm](mailto:{{ site.email }})
+* email：[xxq2dream@gmail.com](mailto:{{ site.email }})
 * 知乎：[Xuxiaoqing](http://www.zhihu.com/people/snowdream-54)
 
