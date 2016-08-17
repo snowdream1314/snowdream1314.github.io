@@ -27,8 +27,8 @@ excerpt:
 
         signingConfigs {
             myConfig {
-                storeFile file("zhenhuimai.jks")    //生成的签名文件
-                keyPassword "123456"    //密码
+                storeFile file("xxxxxx.jks")    //生成的签名文件
+                keyPassword "******"    //密码
             }
         }
 
