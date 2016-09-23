@@ -323,6 +323,37 @@ excerpt:
 
 ---
 
+#### 友盟统计分析
+
+* 下载SDK[友盟](http://dev.umeng.com/analytics/android-doc/integration#),查看文档
+
+* 将jar文件添加到项目中
+
+* 配置AndroidManifest文件和权限：
+
+        <!-- #######################   UMAnalytics   ###################### -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="YOUR_APP_KEY" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="google" />//渠道，应用市场
+
+* 统计设置分为2种情况:只有Activity和包含Activity、Fragment或View，具体参考文档，注意在程序退出时调用：
+
+        MobclickAgent.onKillProcess(Context context)方法，用来保存统计数据。
+
+
+---
+
+#### 兑吧,兑吧需要后台服务器配置，这里只是客户端的集成
+
+* 参考官方文档[兑吧](http://home.duiba.com.cn/dload.html)
+
+        下载源码示例后，解压文件，里面包含了一个可以直接运行的demo工程CreditsActivity类复制到自己的工程中 ，自己创建一个Activity继承CreditsActivity，通过覆写相关方法，重画导航条风格。 启动方法参考MainActivity中的代码即可。
+
+---
+
 > 参考文章：
 
 ---
