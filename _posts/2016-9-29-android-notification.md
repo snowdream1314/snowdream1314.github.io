@@ -16,7 +16,7 @@ excerpt:
         NotificationManager manger = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         Intent lunchIntent = new Intent();
-        lunchIntent.setClass(context, MainActivity.class);
+        lunchIntent.setClass(context, MainActivity.class);//目标activity
 
         if (!jsonObject.isNull("scheme")) {
             String value = jsonObject.getString("scheme");
@@ -47,6 +47,46 @@ excerpt:
         notification.defaults= Notification.DEFAULT_SOUND;
         notification.flags = Notification.FLAG_AUTO_CANCEL;
         manger.notify(new Random().nextInt(), notification);
+        
+* 从通知栏点击进入后，要处理相关逻辑，需要在目标activity，此处即为MainActivity的onResume方法里提取bundle里面的内容以便进行跳转等
+
+        //推送点击进入处理
+        private void pushHandle() {
+            //推送点击进入
+            Bundle bundle = getIntent().getBundleExtra("xxx");
+            if(bundle != null){
+                try {
+
+                    String scheme = bundle.getString("scheme");
+
+                    Uri uri = Uri.parse(scheme);
+                    String from_tab = uri.getQueryParameter("from_tab");
+
+                    SchemeHandler handler = new SchemeHandler(this, null);
+                    handler.handler(scheme);    //利用handle跳转
+
+                    getIntent().removeExtra("xxx");
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+* 特别的，当程序运行在后台，比如在按home键回到桌面时，这时收到消息通知，点击进入MainActivity的onResume方法时会发现bundle为空，这是因为intent没有更新的缘故。这种情况下在调用onResume之前会先调用onNewIntent方法：
+
+        //程序后台运行时，更新intent，以便处理此时收到的推送
+        @Override
+        protected void onNewIntent(Intent intent) {
+            super.onNewIntent(intent);  //最新的intent
+            Log.e("onNewIntent", " called");
+
+            setIntent(intent);
+            getIntent().putExtras(intent);//将最新的intent共享出去
+
+        }
+        
+        接着会调用onResume，此时即可处理通知消息
 
 ---
 
