@@ -88,6 +88,16 @@ excerpt:
         
         接着会调用onResume，此时即可处理通知消息
 
+* 通知图标显示问题：需要把图标放到对应的res资源文件夹下面，setSmallIcon(R.mipmap.push)设置的是小图标.
+
+        defaultConfig {
+            applicationId "xxx"
+            minSdkVersion 15
+            targetSdkVersion 19     //此外大于20的都会有兼容问题，如果通知图标显示有问题可以试着改成20以下的版本
+            versionCode 1
+            versionName "1.0"
+        }
+        
 ---
 
 > 参考文章：
