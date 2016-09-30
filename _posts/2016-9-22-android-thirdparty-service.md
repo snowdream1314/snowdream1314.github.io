@@ -11,7 +11,7 @@ excerpt:
 
 ---
 
-### Android 嵌入第三方服务，包括信鸽推送、友盟统计、百度更新、阿里百川等
+### Android 嵌入第三方服务，包括信鸽推送、友盟统计、百度更新、阿里百川、个推等
 
 ---
 
@@ -351,6 +351,16 @@ excerpt:
 * 参考官方文档[兑吧](http://home.duiba.com.cn/dload.html)
 
         下载源码示例后，解压文件，里面包含了一个可以直接运行的demo工程CreditsActivity类复制到自己的工程中 ，自己创建一个Activity继承CreditsActivity，通过覆写相关方法，重画导航条风格。 启动方法参考MainActivity中的代码即可。
+
+---
+
+#### 个推推送
+
+* 下载资源包，里面有文档和SDK[个推Android](http://docs.getui.com/mobile/android/overview/)
+
+* 将个推导入项目中有2种方式自动导入和手动导入，推荐自动导入(Android Studio)，跟着文档走没错！呵呵
+
+* 推送消息处理的话参看[Android 消息通知](http://snowdream1314.github.io/2016/09/29/android-notification/)
 
 ---
 
