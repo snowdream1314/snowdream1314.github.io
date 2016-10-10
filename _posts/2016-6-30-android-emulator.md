@@ -50,6 +50,8 @@ excerpt:
 
 * 从Genymotion虚拟机里面退出鼠标和键盘，按键盘右边的CTRL键
 
+* 虚拟机中没有键盘弹出，需要设置对应的虚拟机勾选：Use virtual keyboard for text input
+
 
 ---
 
