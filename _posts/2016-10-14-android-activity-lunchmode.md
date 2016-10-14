@@ -63,7 +63,15 @@ excerpt:
             getIntent().putExtras(intent);//将最新的intent共享出去
 
         }
-        
+
+> 在要启动 activity 时，你可以在传给 startActivity() 的 intent 中包含相应标志，以便修改 activity 与 task 的默认关系。这个标志可以修改的默认模式包括：
+
+        * FLAG_ACTIVITY_NEW_TASK：对应于singleTask；
+
+        * FLAG_ACTIVITY_SINGLE_TOP： 对应于singleTop；
+
+        * FLAG_ACTIVITY_CLEAR_TOP： 如果要启动的 activity 已经在当前 task 中运行，则不再启动一个新的实例，且所有在其上面的 activity 将被销毁，然后通过onNewIntent()传入 intent 并恢复 activity（不在栈顶）的运行。
+此种模式在launchMode中没有对应的属性值。
 
 ---
 
