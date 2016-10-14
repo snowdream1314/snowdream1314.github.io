@@ -46,13 +46,24 @@ excerpt:
 
         　情况一：如果在本程序中启动singleTask的activity：假设ActivityA是程序的入口，是默认的模式（standard）,ActivityB是singleTask 模式，由ActivityA启动，刚ActivityB不会位于栈底，不是根元素，不会启动新的task，此种情况ActivityB会和ActivityA在一个栈中，位于ActivityA上面
 
-    　　情况二：如果ActivityB由另外一个程序启动：假设apkA是情况一中的应用，apkB是另外一个测试程序，在apkB中启动apkA中的ActivityB，再分两种情况，如果ActivityB未启动过，刚ActivityB会位于栈底，是根元素，会启动新的task；如果ActivityB启动过，则ActivityB保持原来的位置不变，在栈底或者栈顶，移除掉ActivityB之上所有的activity(如果有)
+    　　  情况二：如果ActivityB由另外一个程序启动：假设apkA是情况一中的应用，apkB是另外一个测试程序，在apkB中启动apkA中的ActivityB，再分两种情况，如果ActivityB未启动过，刚ActivityB会位于栈底，是根元素，会启动新的task；如果ActivityB启动过，则ActivityB保持原来的位置不变，在栈底或者栈顶，移除掉ActivityB之上所有的activity(如果有)
 
 * "singleInstance":
 
     除了系统不会把其它 activity 放入当前实例所在的 task 之外，其它均与"singleTask"相同。activity 总是它所在 task 的唯一成员；它所启动的任何 activity 都会放入其它 task 中。
 
-> 除了标准模式以外， 都需要复写onNewIntent()方法
+> 除了标准模式以外， 都需要复写onNewIntent()方法,以便获取最新的Intent:
+
+        @Override
+        protected void onNewIntent(Intent intent) {
+            super.onNewIntent(intent);
+            Log.e("onNewIntent", " called");
+
+            setIntent(intent);
+            getIntent().putExtras(intent);//将最新的intent共享出去
+
+        }
+        
 
 ---
 
