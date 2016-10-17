@@ -246,6 +246,12 @@ excerpt:
 
 ---
 
+#### 为ListView添加headerview
+
+    [android listview addHeaderView和addFooterView的注意事项](http://blog.csdn.net/aaronzzq/article/details/8532878)
+
+---
+
 > 参考文章：[FragmentTabHost的应用](http://www.colabug.com/thread-1054253-1-1.html)、[竖型TABHOST](http://www.cnblogs.com/shanzei/archive/2012/04/06/2419367.html)
 
 ---

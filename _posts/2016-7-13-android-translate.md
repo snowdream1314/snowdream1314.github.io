@@ -80,6 +80,74 @@ excerpt:
 
 ---
 
+### 透明度动画
+
+        private int zhishuNum = -1;
+
+        private AlphaAnimation toLight, toDark;
+
+        if (!initZhishu) {
+            initZhishu = true;
+            zhishuNum = 0;
+            toLight = new AlphaAnimation(1, 0);//透明度动画
+            toLight.setDuration(2000);//动画持续时间
+            toLight.setFillAfter(true);//执行完停留在执行完的状态
+            toLight.setStartOffset(1000);//开始前等待时间
+            toLight.setRepeatCount(0);//动画重复次数
+
+            toDark = new AlphaAnimation(0, 1);
+            toDark.setDuration(1500);//动画持续时间
+            toDark.setFillAfter(true);//执行完停留在执行完的状态
+            toDark.setStartOffset(1000);//开始前等待时间
+            toDark.setRepeatCount(0);//动画重复次数
+
+            zhishuNameTextView.setText(weather.getZhishus().get(zhishuNum).getName() + "：" + weather.getZhishus().get(zhishuNum).getValue());
+            zhishuDatailTextView.setText(weather.getZhishus().get(zhishuNum).getDetail());
+            zhishuLinearLayout.setAnimation(toLight);
+            toLight.startNow();
+
+            toLight.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    zhishuNum += 1;
+                    if (zhishuNum == 11) zhishuNum = 0;
+                    zhishuLinearLayout.setAnimation(toDark);
+                    zhishuNameTextView.setText(weather.getZhishus().get(zhishuNum).getName() + "：" + weather.getZhishus().get(zhishuNum).getValue());
+                    zhishuDatailTextView.setText(weather.getZhishus().get(zhishuNum).getDetail());
+                    toDark.startNow();
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+
+            toDark.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    zhishuLinearLayout.setAnimation(toLight);
+                    toLight.startNow();
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+        }
+
+---
+
 > 参考文章：[实现activity跳转动画的五种方式](http://blog.csdn.net/qq_23547831/article/details/51821159)
 
 
