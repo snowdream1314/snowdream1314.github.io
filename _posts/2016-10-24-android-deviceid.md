@@ -32,7 +32,12 @@ excerpt:
     缺陷：
     - 非手机设备：最开始搭载Android系统都手机设备，而现在也出现了非手机设备：如平板电脑、电视、音乐播放器等。这些设备没有通话的硬件功能，系统中也就没有TELEPHONY_SERVICE，自然也就无法通过上面的方法获得DEVICE_ID。
     - 权限问题：获取DEVICE_ID需要READ_PHONE_STATE权限，在Android 6.0上使用运行时动态授予权限的机制，一旦用户不给予授权，将获取不到DEVICE_ID。 
-    - 厂商定制系统中的Bug：少数手机设备上，由于该实现有漏洞，会返回垃圾（这是开发者博客的原话，没有实践过）。
+    - 厂商定制系统中的Bug：少数手机设备上，由于该实现有漏洞，会返回垃圾，如:zeros或者asterisks。
+
+    补充：
+    MEID：Mobile Equipment IDentifier（MEID）是全球唯一的56bit移动终端标识号。标识号会被烧入终端里，并且不能被修改。可用来对移动式设备进行身份识别和跟踪。MEID主要分配给CDMA制式的手机。
+    IMEI：IMEI(International Mobile Equipment Identity)是国际移动设备身份码的缩写，国际移动装备辨识码，是由15位数字组成的"电子串号"，它与每台手机一一对应。IMEI码由GSM（全球移动通信协会）统一分配。
+    ESN：ESN是电子序列号Electronic Serial Number的缩写。它是一个32bits长度的参数，是手机的惟一标识。
 
 * MAC ADDRESS
 
@@ -121,6 +126,124 @@ ANDROID_ID是设备第一次启动时产生和存储的64bit的一个数，当�
             }
         }
 
+---
+
+#### UUID操作类
+
+        public class UniversalID {
+
+            private static String filePath = File.separator + "HappyShopping" + File.separator + "comm";
+
+            public static String getUniversalID(Context context) {
+                String androidId;
+                String fileRootPath = getPath(context) + filePath;
+                String uuid = FileUtils.readFile(fileRootPath);
+                if (uuid == null || uuid.equals("")) {
+                    androidId = "" + Settings.Secure.getString(context.getContentResolver(),
+                            Settings.Secure.ANDROID_ID);
+                    try {
+                        if (!"9774d56d682e549c".equals(androidId)) {
+                            uuid = UUID.nameUUIDFromBytes(androidId.getBytes("utf8")).toString();
+                        } else {
+                            FLDLog.e("uuid==9774d56d682e549c----->true");
+                            uuid = UUID.randomUUID().toString();
+                        }
+                    } catch (Exception e) {
+                        uuid = UUID.randomUUID().toString();
+                    }
+
+                    String uuid_md5 = MD5Util.MD5Encode(uuid, "UTF-8");
+                    if(!uuid.equals("")){
+                        saveUUID(context,uuid_md5);
+                    }
+
+                    return uuid_md5;
+                }else {
+                    return uuid;
+                }
+            }
+
+            public static void saveUUID(Context context, String UUID) {
+                String ExternalSdCardPath = getExternalSdCardPath() + filePath;
+                FileUtils.writeFile(ExternalSdCardPath, UUID);
+                String InnerPath = context.getFilesDir().getAbsolutePath() + filePath;
+                FileUtils.writeFile(InnerPath,UUID);
+            }
+
+            public static String getPath(Context context) {
+                //首先判断是否有外部存储卡，如没有判断是否有内部存储卡，如没有，继续读取应用程序所在存储
+                String phonePicsPath = getExternalSdCardPath();
+                if (phonePicsPath == null) {
+                    phonePicsPath = context.getFilesDir().getAbsolutePath();
+                }
+                return phonePicsPath;
+            }
+
+            /**
+             * 遍历 "system/etc/vold.fstab” 文件，获取全部的Android的挂载点信息
+             *
+             * @return
+             */
+            private static ArrayList<String> getDevMountList() {
+                String[] toSearch = FileUtils.readFile("/system/etc/vold.fstab").split(" ");
+                ArrayList<String> out = new ArrayList<>();
+                for (int i = 0; i < toSearch.length; i++) {
+                    if (toSearch[i].contains("dev_mount")) {
+                        if (new File(toSearch[i + 2]).exists()) {
+                            out.add(toSearch[i + 2]);
+                        }
+                    }
+                }
+                return out;
+            }
+
+            /**
+             * 获取扩展SD卡存储目录
+             * <p/>
+             * 如果有外接的SD卡，并且已挂载，则返回这个外置SD卡目录
+             * 否则：返回内置SD卡目录
+             *
+             * @return
+             */
+            public static String getExternalSdCardPath() {
+
+                if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                    File sdCardFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
+                    return sdCardFile.getAbsolutePath();
+                }
+
+                String path = null;
+
+                File sdCardFile = null;
+
+                ArrayList<String> devMountList = getDevMountList();
+
+                for (String devMount : devMountList) {
+                    File file = new File(devMount);
+
+                    if (file.isDirectory() && file.canWrite()) {
+                        path = file.getAbsolutePath();
+
+                        String timeStamp = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
+                        File testWritable = new File(path, "test_" + timeStamp);
+
+                        if (testWritable.mkdirs()) {
+                            testWritable.delete();
+                        } else {
+                            path = null;
+                        }
+                    }
+                }
+
+                if (path != null) {
+                    sdCardFile = new File(path);
+                    return sdCardFile.getAbsolutePath();
+                }
+
+                return null;
+            }
+
+        }
 
 
 ---
