@@ -106,22 +106,23 @@ ANDROID_ID是设备第一次启动时产生和存储的64bit的一个数，当�
                 String androidID;
                 try {
                     androidID = "" + Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
-                    if (!"9774d56d682e549c".equals(androidID)) {
-                        deviceIdString = UUID.nameUUIDFromBytes(androidID.getBytes("utf8")).toString();
-                    }else {
+                    if ("".equals(androidID) || "9774d56d682e549c".equals(androidID)) {
                         deviceIdString = UUID.randomUUID().toString();
+                    }
+                    else {
+                        deviceIdString = UUID.nameUUIDFromBytes(androidID.getBytes("utf8")).toString();
                     }
 
                 }catch (Exception e) {
                     e.printStackTrace();
                     deviceIdString = UUID.randomUUID().toString();
                 }
-                FLDLog.e("deviceid----->" + deviceIdString);
+                
                 String device_id_md5 = MD5Util.MD5Encode(deviceIdString, "UTF-8");
                 sp.setKeyStr(deviceid_key, device_id_md5);
                 return device_id_md5;
             }else {
-                FLDLog.e("deviceid----->" + deviceIdString);
+                
                 return deviceIdString;
             }
         }
@@ -142,11 +143,11 @@ ANDROID_ID是设备第一次启动时产生和存储的64bit的一个数，当�
                     androidId = "" + Settings.Secure.getString(context.getContentResolver(),
                             Settings.Secure.ANDROID_ID);
                     try {
-                        if (!"9774d56d682e549c".equals(androidId)) {
-                            uuid = UUID.nameUUIDFromBytes(androidId.getBytes("utf8")).toString();
-                        } else {
-                            FLDLog.e("uuid==9774d56d682e549c----->true");
+                        if ("".equals(androidID) || "9774d56d682e549c".equals(androidID)) {
                             uuid = UUID.randomUUID().toString();
+                        }
+                        else {
+                            uuid = UUID.nameUUIDFromBytes(androidID.getBytes("utf8")).toString();
                         }
                     } catch (Exception e) {
                         uuid = UUID.randomUUID().toString();
