@@ -49,6 +49,17 @@ excerpt:
             android:screenOrientation="portrait"
             android:theme="@style/introduce">
         </activity>
+
+---
+
+* AndroidStudio导入项目一直卡在Building gradle project info
+    
+    - AndroidStudio导入项目一直卡在Building gradle project info，实际上是因为你导入的这个项目使用的gradle与你已经拥有的gradle版本不一致，导致需要下载该项目需要的gradle版本，不知是被墙了还是什么原因，反正就是会一直卡住，直至下载完成.
+
+    解决办法：
+
+    - 去官网下载gradle的版本，然后放到本地
+    - 直接修改gradle-wrapper.properties文件：找一个能运行的AndroidStudio项目，打开gradle-wrapper.properties，文件目录：项目/gradle/wrapper/gradle-wrapper.properties，复制distributionUrl这一整行的内容，替换对应需要打开的项目即可
         
 ---
 
