@@ -82,6 +82,12 @@ excerpt:
 
 * Unable to add window -- token null is not valid; is your activity running?
 
+    - 出现的原因是fragment中dialog的getActivity()为null
+
+    - dialog的Context不能用application
+    - getActivity() 必须在确保Fragment的生命周期方法回调以后调用，最好是在OnResume()方法以后，此时getActivity()不会为null
+
+
 ---
 
 > 参考文章：
