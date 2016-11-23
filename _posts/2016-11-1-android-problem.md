@@ -52,7 +52,7 @@ excerpt:
 
 ---
 
-* AndroidStudio导入项目一直卡在Building gradle project info
+* Android Studio导入项目一直卡在Building gradle project info
     
     - AndroidStudio导入项目一直卡在Building gradle project info，实际上是因为你导入的这个项目使用的gradle与你已经拥有的gradle版本不一致，导致需要下载该项目需要的gradle版本，不知是被墙了还是什么原因，反正就是会一直卡住，直至下载完成.
 
@@ -61,6 +61,27 @@ excerpt:
     - 去官网下载gradle的版本，然后放到本地
     - 直接修改gradle-wrapper.properties文件：找一个能运行的AndroidStudio项目，打开gradle-wrapper.properties，文件目录：项目/gradle/wrapper/gradle-wrapper.properties，复制distributionUrl这一整行的内容，替换对应需要打开的项目即可
         
+---
+
+*  JSON中optString和getString的区别:
+    
+    - optString方法会在对应的key中的值不存在的时候返回一个空字符串或者返回你指定的默认值，但是getString方法会出现空指针异常的错误。
+
+---
+
+* Android Studio 编译不通过，错误：Error:Execution failed for task ':app:clean'. > Unable to delete directory: C:\Users\CB-Ye\...
+
+    - 多次编译试一试
+    - Settings --> Instant Run --> 将Enable Instant Run ....选项去掉，重新编译
+
+---
+
+* 
+
+---
+
+* Unable to add window -- token null is not valid; is your activity running?
+
 ---
 
 > 参考文章：
