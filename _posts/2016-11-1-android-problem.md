@@ -76,10 +76,6 @@ excerpt:
 
 ---
 
-* 
-
----
-
 * Unable to add window -- token null is not valid; is your activity running?
 
     - 出现的原因是fragment中dialog的getActivity()为null
@@ -87,6 +83,105 @@ excerpt:
     - dialog的Context不能用application
     - getActivity() 必须在确保Fragment的生命周期方法回调以后调用，最好是在OnResume()方法以后，此时getActivity()不会为null
 
+
+---
+
+* android.view.WindowManager$BadTokenException: Unable to add window -- token null is not for an application
+* android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@1da4001 is not valid; is your activity running?
+
+    - 主要还是dialog的getActivity() = null，在加载数据时往往需要显示dialog，再这之间一定要确保getActivity() != null
+
+---
+
+* viewpage + fragments的结构，在加了本地缓存的情况下，出现特殊的情况：本地加载以后，网络请求得到的数据和本地不一样，需要重新刷新生成Viewpager + fragments。这个时候就容易报上面的错误。按照逻辑应该重新生成新的viewpager + fragments,但是viewpager + pagerFragmentAdapter会缓存先前的fragment。采用以下方法：
+
+        FragmentAdapter adapter = new FragmentAdapter(getActivity().getSupportFragmentManager(), fragments);
+
+        salePager = resetSalePager(adapter);
+
+        private ViewPager resetSalePager(final SaleFragmentAdapter adapter){
+
+
+            ViewGroup group = (ViewGroup)salePager.getParent();
+
+            int pagerId = salePager.getId();
+            group.removeView(salePager);
+
+
+            ViewPager viewPager = new ViewPager(getActivity());
+            viewPager.setId(pagerId);
+            viewPager.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            viewPager.setAdapter(adapter);
+            group.addView(viewPager);
+
+            viewPager.addOnPageChangeListener(pageChangeListener);
+
+            return viewPager;
+        }
+
+        //FragmentAdapter采用FragmentStatePagerAdapter
+        private class SaleFragmentAdapter extends FragmentStatePagerAdapter {
+
+            private List<? extends Fragment> fragments;
+
+            public SaleFragmentAdapter(FragmentManager fm, List<? extends Fragment> fragments){
+
+                super(fm);
+                this.fragments = fragments;
+            }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return fragments != null && position < fragments.size() ? ((PullRequestMoreFragment)fragments.get(position)).getTitle() : "";
+            }
+
+            @Override
+            public int getItemPosition(Object object) { //返回POSITION_NONE，强制生成新的fragment
+                return POSITION_NONE;
+            }
+
+            @Override
+            public Fragment getItem(int position) {
+                return fragments.get(position);
+            }
+
+            @Override
+            public int getCount() {
+                return fragments.size();
+            }
+
+            @Override
+            public Object instantiateItem(ViewGroup container, final int position) {
+                return super.instantiateItem(container, position);
+            }
+
+            @Override
+            public void destroyItem(ViewGroup container, int position, Object object) {
+                container.removeView((View) object);
+            }
+
+        }
+
+
+---
+
+* Activity + PagerSlidingTabStrip + ViewPager + Fragments从后台返回时，Fragemnts被销毁，重新生成失败
+
+    - 一般是应用再后台时间长了，或是系统资源紧张了，所以直接重新生成新的fragments,方法是阻止Activity通过savedInstanceState恢复状态
+
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(null);
+            }
+
+            @Override
+            public void onRestoreInstanceState(Bundle savedInstanceState) {
+                Bundle bundle = new Bundle();
+                super.onRestoreInstanceState(bundle);
+
+            }
+
+    - 参考文章：[Prevent Fragment recovery in Android]{http://stackoverflow.com/questions/15519214/prevent-fragment-recovery-in-android}
 
 ---
 
