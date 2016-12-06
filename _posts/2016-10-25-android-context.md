@@ -54,6 +54,7 @@ excerpt:
             return activity;
         }
 
+> dialog的Context不能用全局Application
 
 ---
 
