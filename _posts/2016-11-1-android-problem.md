@@ -185,6 +185,53 @@ excerpt:
 
 ---
 
+* java.lang.ArrayIndexOutOfBoundsException: length=2; index=2; at android.widget.AbsListView$RecycleBin.addScrapView(AbsListView.java:7135)
+
+    - 使用ListView出现的错误，原因是getViewTypeCount()和getItemViewType(int position)2个方法没有注意到。
+    - getItemViewType(int position)告诉ListView具体的每一个Item用什么布局,该方法中返回的type类型必须为整数且不能大于getViewTypeCount返回的数
+    - getViewTypeCount()返回的是一共又多少种布局的Item
+    - 参考文章：[ArrayIndexOutOfBoundsException with custom Android Adapter for multiple views in ListView][http://stackoverflow.com/questions/2596547/arrayindexoutofboundsexception-with-custom-android-adapter-for-multiple-views-in]
+
+---
+
+* java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState
+
+    - 出现的场景是用户按Home键退出程序时触发App底部的FragmentTabHost选项标签
+    - 解决办法是:
+
+        @override
+        public void onResume() {
+            super.onResume();
+            fragmentTabHost.getTabWidget().setEnabled(true);
+        }
+
+        @Override
+        public void onPause() {
+            super.onPause();
+            fragmentTabHost.getTabWidget().setEnabled(false);
+        }
+
+        参考文章：[Can not perform this action after onSaveInstanceState](http://stackoverflow.com/questions/20357478/supportfragment-tabwidget-samsung-device-java-lang-illegalstateexception)
+
+
+---
+
+* java.lang.IndexOutOfBoundsException: Invalid index 0, size is 0;at com.gxz.library.StickyNavLayout.getCurrentScrollView(SourceFile:338);at sh$a.getItem(SourceFile:422)
+
+    - StickyNavLayout + PagerSlidingTabStrip + ViewPager + FragmentPagerAdaoter,问题出现在FragmentPagerAdapter的GetItem()方法；
+
+        @Override
+        public Fragment getItem(int position) {
+
+            if (fragments == null || fragments.size() == 0) {//增加判断
+                return null;
+            }
+            return fragments.get(position);
+        }
+
+
+---
+
 > 参考文章：
 
 ---
