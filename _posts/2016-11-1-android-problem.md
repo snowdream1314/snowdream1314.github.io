@@ -73,6 +73,7 @@ excerpt:
 
     - 多次编译试一试
     - Settings --> Instant Run --> 将Enable Instant Run ....选项去掉，重新编译
+    - 去projectpath/.gradle/<gradle-version>/taskArtifacts/目录下看有没有*.lock的文件，删掉再重试
 
 ---
 

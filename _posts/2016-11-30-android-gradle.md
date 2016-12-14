@@ -37,7 +37,7 @@ excerpt:
 
 		        release {	//release版本的一些默认设置
 		//            signingConfig signingConfigs.config
-		            minifyEnabled true
+		            minifyEnabled true		//是否进行混淆
 		            zipAlignEnabled true
 		            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 		            
