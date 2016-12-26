@@ -38,7 +38,7 @@ excerpt:
 		        release {	//release版本的一些默认设置
 		//            signingConfig signingConfigs.config
 		            minifyEnabled true		//是否进行混淆
-		            zipAlignEnabled true
+		            zipAlignEnabled true	//安装包中的资源按4字节对齐,减少应用在运行时的内存消耗
 		            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 		            
 		        }
@@ -66,6 +66,7 @@ excerpt:
 		        }
 
 			}
+		}
 
 ---
 
@@ -83,7 +84,7 @@ excerpt:
 	            storePassword '111111'
 	        }
 
-	        demo1 {		//版本2
+	        demo2 {		//版本2
 	            keyAlias 'demo2'
 	            keyPassword '111111'
 	            storeFile file('C:\\Desktop\\apps\\demo2.jks')
@@ -127,7 +128,7 @@ excerpt:
 
 * 经过以上的配置以后，点击Android Studio左下角的Build Variant，可以看到一共又四个版本的App可以编译，分别是：demo1Debug、demo1Release、demo2Debug、demo2Release;而且demo1和demo2的包名不同，可以安装在同一部手机里
 
-* 不同的特性的应用旺旺很多东西需要改，比如名字，图标，启动图，主题色，及其他一些功能，比如推送、更新的一些设置等。
+* 不同的特性的应用往往很多东西需要改，比如名字，图标，启动图，主题色，及其他一些功能，比如推送、更新的一些设置等。
 
 		//根据不同的版本配置AndroidManifest.xml文件,同productFlavors的manifestPlaceholders属性
 		productFlavors {
@@ -173,7 +174,7 @@ excerpt:
 
 * 除了以上的简单配置以外，还可以根据需要更改其他的一些特性，比如不同版本的App需要不同的启动图，以及更改主色等。方法是直接再Src目录下，建立一个与main同级的结构和main一样的目录,去除所有的Java代码和资源等，在需要更改的地方，比如需要修改字符串或者颜色，就重写values下的colors，或是strings文件，编译的时候同样的属性会合并替换，layout下的同名xml文件会替换。这样不同版本的App只要建立不同的目录，修改对应的资源文件即可。然后在代码中根据不同的版本做相应处理即可。
 
-* 所建立的目录不能有和main中一样的类，否则会报同名冲突错误；但是可以增加类， 也就时可以增加功能。
+* 所建立的目录不能有和main中一样的类，否则会报同名冲突错误；但是可以增加类， 也就是可以增加功能。
 
 ---
 
