@@ -52,7 +52,7 @@ excerpt:
 
 ---
 
-* AndroidStudio导入项目一直卡在Building gradle project info
+* Android Studio导入项目一直卡在Building gradle project info
     
     - AndroidStudio导入项目一直卡在Building gradle project info，实际上是因为你导入的这个项目使用的gradle与你已经拥有的gradle版本不一致，导致需要下载该项目需要的gradle版本，不知是被墙了还是什么原因，反正就是会一直卡住，直至下载完成.
 
@@ -61,6 +61,176 @@ excerpt:
     - 去官网下载gradle的版本，然后放到本地
     - 直接修改gradle-wrapper.properties文件：找一个能运行的AndroidStudio项目，打开gradle-wrapper.properties，文件目录：项目/gradle/wrapper/gradle-wrapper.properties，复制distributionUrl这一整行的内容，替换对应需要打开的项目即可
         
+---
+
+*  JSON中optString和getString的区别:
+    
+    - optString方法会在对应的key中的值不存在的时候返回一个空字符串或者返回你指定的默认值，但是getString方法会出现空指针异常的错误。
+
+---
+
+* Android Studio 编译不通过，错误：Error:Execution failed for task ':app:clean'. > Unable to delete directory: C:\Users\CB-Ye\...
+
+    - 多次编译试一试
+    - Settings --> Instant Run --> 将Enable Instant Run ....选项去掉，重新编译
+    - 去projectpath/.gradle/<gradle-version>/taskArtifacts/目录下看有没有*.lock的文件，删掉再重试
+
+---
+
+* Unable to add window -- token null is not valid; is your activity running?
+
+    - 出现的原因是fragment中dialog的getActivity()为null
+
+    - dialog的Context不能用application
+    - getActivity() 必须在确保Fragment的生命周期方法回调以后调用，最好是在OnResume()方法以后，此时getActivity()不会为null
+
+
+---
+
+* android.view.WindowManager$BadTokenException: Unable to add window -- token null is not for an application
+* android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@1da4001 is not valid; is your activity running?
+
+    - 主要还是dialog的getActivity() = null，在加载数据时往往需要显示dialog，再这之间一定要确保getActivity() != null
+
+---
+
+* viewpage + fragments的结构，在加了本地缓存的情况下，出现特殊的情况：本地加载以后，网络请求得到的数据和本地不一样，需要重新刷新生成Viewpager + fragments。这个时候就容易报上面的错误。按照逻辑应该重新生成新的viewpager + fragments,但是viewpager + pagerFragmentAdapter会缓存先前的fragment。采用以下方法：
+
+        FragmentAdapter adapter = new FragmentAdapter(getActivity().getSupportFragmentManager(), fragments);
+
+        salePager = resetSalePager(adapter);
+
+        private ViewPager resetSalePager(final SaleFragmentAdapter adapter){
+
+
+            ViewGroup group = (ViewGroup)salePager.getParent();
+
+            int pagerId = salePager.getId();
+            group.removeView(salePager);
+
+
+            ViewPager viewPager = new ViewPager(getActivity());
+            viewPager.setId(pagerId);
+            viewPager.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            viewPager.setAdapter(adapter);
+            group.addView(viewPager);
+
+            viewPager.addOnPageChangeListener(pageChangeListener);
+
+            return viewPager;
+        }
+
+        //FragmentAdapter采用FragmentStatePagerAdapter
+        private class SaleFragmentAdapter extends FragmentStatePagerAdapter {
+
+            private List<? extends Fragment> fragments;
+
+            public SaleFragmentAdapter(FragmentManager fm, List<? extends Fragment> fragments){
+
+                super(fm);
+                this.fragments = fragments;
+            }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return fragments != null && position < fragments.size() ? ((PullRequestMoreFragment)fragments.get(position)).getTitle() : "";
+            }
+
+            @Override
+            public int getItemPosition(Object object) { //返回POSITION_NONE，强制生成新的fragment
+                return POSITION_NONE;
+            }
+
+            @Override
+            public Fragment getItem(int position) {
+                return fragments.get(position);
+            }
+
+            @Override
+            public int getCount() {
+                return fragments.size();
+            }
+
+            @Override
+            public Object instantiateItem(ViewGroup container, final int position) {
+                return super.instantiateItem(container, position);
+            }
+
+            @Override
+            public void destroyItem(ViewGroup container, int position, Object object) {
+                container.removeView((View) object);
+            }
+
+        }
+
+
+---
+
+* Activity + PagerSlidingTabStrip + ViewPager + Fragments从后台返回时，Fragemnts被销毁，重新生成失败
+
+    - 一般是应用再后台时间长了，或是系统资源紧张了，所以直接重新生成新的fragments,方法是阻止Activity通过savedInstanceState恢复状态
+
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(null);
+            }
+
+            @Override
+            public void onRestoreInstanceState(Bundle savedInstanceState) {
+                Bundle bundle = new Bundle();
+                super.onRestoreInstanceState(bundle);
+
+            }
+
+    - 参考文章：[Prevent Fragment recovery in Android]{http://stackoverflow.com/questions/15519214/prevent-fragment-recovery-in-android}
+
+---
+
+* java.lang.ArrayIndexOutOfBoundsException: length=2; index=2; at android.widget.AbsListView$RecycleBin.addScrapView(AbsListView.java:7135)
+
+    - 使用ListView出现的错误，原因是getViewTypeCount()和getItemViewType(int position)2个方法没有注意到。
+    - getItemViewType(int position)告诉ListView具体的每一个Item用什么布局,该方法中返回的type类型必须为整数且不能大于getViewTypeCount返回的数
+    - getViewTypeCount()返回的是一共又多少种布局的Item
+    - 参考文章：[ArrayIndexOutOfBoundsException with custom Android Adapter for multiple views in ListView][http://stackoverflow.com/questions/2596547/arrayindexoutofboundsexception-with-custom-android-adapter-for-multiple-views-in]
+
+---
+
+* java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState
+
+    - 出现的场景是用户按Home键退出程序时触发App底部的FragmentTabHost选项标签
+    - 解决办法是:
+
+        @override
+        public void onResume() {
+            super.onResume();
+            fragmentTabHost.getTabWidget().setEnabled(true);
+        }
+
+        @Override
+        public void onPause() {
+            super.onPause();
+            fragmentTabHost.getTabWidget().setEnabled(false);
+        }
+
+        参考文章：[Can not perform this action after onSaveInstanceState](http://stackoverflow.com/questions/20357478/supportfragment-tabwidget-samsung-device-java-lang-illegalstateexception)
+
+
+---
+
+* java.lang.IndexOutOfBoundsException: Invalid index 0, size is 0;at com.gxz.library.StickyNavLayout.getCurrentScrollView(SourceFile:338);at sh$a.getItem(SourceFile:422)
+
+    - StickyNavLayout + PagerSlidingTabStrip + ViewPager + FragmentPagerAdaoter,问题出现在FragmentPagerAdapter的GetItem()方法；
+
+        @Override
+        public Fragment getItem(int position) {
+
+            if (fragments == null || fragments.size() == 0) {//增加判断
+                return null;
+            }
+            return fragments.get(position);
+        }
+
+
 ---
 
 > 参考文章：
