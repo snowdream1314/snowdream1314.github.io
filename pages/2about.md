@@ -30,20 +30,21 @@ icon: glyphicon-heart
 
  * 解决了ListView侧滑删除和下拉刷新的滑动冲突问题，对Android的事件分发机制有了更深的理解，并在阅读开源控件源码的基础上，整合了一款ListView下拉刷新和滑动删除的控件并开源
  * 熟悉了原生Android结合H5混合开发
- * 熟悉了Android开发中常用的一些功能的实现，如动态轮播图，自定义Dialog等
+ * 熟悉了Android中的JNI开发，并且使用JNI方法加固了APP关键的代码
  * 第三方SDK集成和使用：信鸽推送、阿里百川、友盟统计和社会化分享等
- * 使用JNI方法加固APP关键的代码
+ * 熟悉了Android开发中常用的一些功能的实现，如动态轮播图，自定义Dialog等，以及一些优秀开源库，如StickyNavLayout、Android-Universal-Image-Loader、sweet-alert-dialog等
  * Android Studio + SVN
  
 > 真会买APP ——汇集各种优惠和值得买商品
 
 真会买APP是我独立负责的第二个APP，收集淘宝和天猫的各种优惠商品提供给用户，并且集成了阿里百川SDK，可以直接关联淘宝购物。同时集成了信鸽推送和友盟统计，便于向用户提供更好的服务。目前已经上线各大应用市场。
 
+* 对App的代码组织和架构有了一定的思考，积累了一些开发技巧
 * 自定义了一个搜索热词自动换行显示的View，对Android的View的工作原理有了更深的理解
-* 熟悉了Android的View动画和属性动画，并根据需要更改了Activity的切换效果
-* 图片加滤镜得到灰色图片，进一步熟悉了Android的图像处理
+* 根据需要修改了Activity的切换效果，进一步熟悉了Android的View动画和属性动画
+* 熟悉了Android的图像处理，并用加滤镜的方式得到灰色图片
+* ListView加载优化，UI布局优化，并用Monkey进行测试
 * 集成阿里百川电商SDK
-* ListView加载优化，UI布局优化
 * Android Studio + SVN
 
 > 针对国内外数十家优惠网站的Python爬虫
