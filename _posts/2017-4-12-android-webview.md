@@ -14,7 +14,7 @@ excerpt:
 
 ---
 
-####销毁webview：
+#### 销毁webview：
 
         if (webView != null) {
             webView.stopLoading();
@@ -26,7 +26,7 @@ excerpt:
             webView = null;
         }
 
-####清除历史记录
+#### 清除历史记录
 
         @Override
         public void doUpdateVisitedHistory(WebView webView, String s, boolean b) {
