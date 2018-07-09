@@ -1,87 +1,27 @@
-## ÐìÏþÇì
+---
+layout: about
+title: 
+permalink: /about/
+icon: glyphicon-heart
+---
 
-Phone: 187 5855 4386¡¡¡¡¡¡¡¡¡¡¡¡¡¡ ¡¡¡¡¡¡           Email: xxq2dream@gmail.com
+### å…³äºŽæˆ‘
 
-GitHub: github.com/snowdream1314¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡Blog: https://www.jianshu.com/u/701052510154
+> ä¸€ç›´åœ¨ä¿®ç‚¼æˆä¸ºç‰›é€¼ç¨‹åºå‘˜çš„è·¯ä¸Šã€‚Small Small Programmer,Big Big Dreamï¼   
+
+å¯¹äºŽæ™ºèƒ½å®¶å±…ã€äººå·¥æ™ºèƒ½ã€æœºå™¨å­¦ä¹ å’Œå¤§æ•°æ®å¾ˆæ„Ÿå…´è¶£ã€‚ç®—æ³•çš„é‡è¦æ€§æ·±å…¥æˆ‘å¿ƒã€‚   
+
+çƒ­çˆ±å¤§è‡ªç„¶ï¼Œçƒ­çˆ±æˆ·å¤–è¿åŠ¨ï¼Œçƒ­çˆ±çˆ¬å±±ã€éª‘è¡Œã€æ—…æ¸¸ã€‚
+
+æœ€å–œæ¬¢çœ‹ç§‘å¹»ç‰‡ï¼Œç‰¹åˆ«é’Ÿçˆ±ã€ŠIron Manã€‹ç³»åˆ—é‡Œçš„äººå·¥æ™ºèƒ½â€”â€”â€”â€”è´¾ç»´æ–¯ï¼  
+
+å–œæ¬¢çœ‹ä¹¦ï¼Œè§†é‡Žå†³å®šçœ‹é—®é¢˜è§’åº¦ã€‚  
 
 ---
 
-### ¸öÈË¾­Àú
+### è”ç³»æˆ‘
 
-#### 2017/4-ÖÁ½ñ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡º¼ÖÝ³µÃ¨»¥ÁªÍø½ðÈÚ·þÎñÓÐÏÞ¹«Ë¾	¡¡¡¡¡¡¡¡¡¡¡¡¡¡Android ¸ß¼¶¿ª·¢
+* GitHub: [Xuxiaoqing](http://github.com/snowdream1314)
+* emailï¼š[xxq2dream@gmail.com](mailto:{{ site.email }})
+* çŸ¥ä¹Žï¼š[Xuxiaoqing](http://www.zhihu.com/people/snowdream-54)
 
-×÷Îª¹«Ë¾ºËÐÄµÄAndroid¿ª·¢ÈËÔ±£¬²ÎÓë³µÃ¨ºÃ³µ¡¢³µÃ¨ºÃ³µÒµÎñ°æµÈ¶à¿îApp´Ó0µ½1µÄ¿ª·¢¹¤×÷¡£ÆÚ¼ä»¹Íê³ÉÒ»¿îÆû³µ·ÖÆÚ²âËãµÄÎ¢ÐÅÐ¡³ÌÐò²¢ÉÏÏß£¬ÒÔ¼°¹«Ë¾¹ÙÍøMÕ¾¸Ä°æµÄ·þÎñ¶Ë¿ª·¢¹¤×÷¡£
-
-#### 2015/9-2017/4¡¡¡¡¡¡¡¡¡¡¡¡º¼ÖÝ²Ê²¬ÍøÂç¿Æ¼¼ÓÐÏÞ¹«Ë¾	¡¡¡¡¡¡¡¡¡¡¡¡¡¡Android ¿ª·¢
-
-×÷ÎªºËÐÄµÄ¿ª·¢ÈËÔ±£¬²ÎÓë¸£Àû¶à¡¢Õæ»áÂòµÈ¶à¿îAppµÄ¿ª·¢¹¤×÷¡£ÆÚ¼ä»¹¸ºÔðÁËÒ»¶ÎÊ±¼äµÄÅÀ³æ¹¤×÷¡£
-
-#### 2014/4-2014/11¡¡¡¡¡¡¡¡¡¡¡¡Õã½­´ï·å¿Æ¼¼ÓÐÏÞ¹«Ë¾	¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡Ó²¼þ¹¤³ÌÊ¦
-
-·Ö±ð×÷ÎªÖ÷Òª¿ª·¢ÈËÔ±ºÍÏîÄ¿¸ºÔðÈË£¬Íê³ÉÏà¹Ø¼Òµç¿ØÖÆÆ÷ÏîÄ¿´Ó³öÍ¼µ½Ð¡ÅúÉú²úµÄ¸ú½ø¿ª·¢¹¤×÷¡£
-
-#### 2013/6-2014/4¡¡¡¡¡¡¡¡¡¡¡¡ºº¶¦ÐÅÏ¢¿Æ¼¼¹É·ÝÓÐÏÞ¹«Ë¾	¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÈõµçÏîÄ¿¾­Àí
-
-ÔÚÖ°ÆÚ¼ä¸ºÔðÁË2¸öÐ¡ÇøµÄÈõµçÖÇÄÜ»¯ÏîÄ¿µÄ¹ÜÀíºÍÐ­µ÷¹¤×÷¡£
-
-
----
-
-### ×¨Òµ¼¼ÄÜ
-
-
-* ½ü3ÄêAndroid¿ª·¢¾­Ñé
-* ²©¿ÍÖ÷Òª·ÖÏíAndroidºÍJava·½ÃæµÄ¿ª·¢¾­Ñé×Ü½áºÍ¶ÁÊé±Ê¼Ç¡£
-* ÊìÏ¤ Android Ó¦ÓÃ¼Ü¹¹Éè¼Æ£¬ÄÜ¶ÀÁ¢¿ª·¢¸ßÐÔÄÜµÄAndroidÓ¦ÓÃ
-* ÊìÏ¤ViewµÄÊÂ¼þ·Ö·¢Ô­ÀíºÍ»æÖÆÁ÷³Ì¼°¶¯»­£¬ÊìÏ¤×Ô¶¨Òå¿Ø¼þ
-* ÊìÏ¤Android¶à½ø³ÌÍ¨ÐÅ¼°Binder»úÖÆ£¬ÊìÏ¤Android¶àÏß³Ì¿ª·¢
-* ÊìÏ¤³£ÓÃµÄÉè¼ÆÄ£Ê½²¢×¢ÖØÔÚÆ½Ê±¿ª·¢ÖÐÊµ¼ù
-* ¹Ø×¢¿ªÔ´¿â£¬²¢ÓÐÔ´ÂëÔÄ¶Á¾­Ñé
-* ÁË½âHtml¡¢CSSµÈÇ°¶ËÏà¹ØÄÚÈÝ£¬ÓÐ¿ª·¢²¢·¢²¼ÉÏÏßÎ¢ÐÅÐ¡³ÌÐò¾­Ñé
-* ÁË½âPython£¬ÓÐ¿ª·¢ÅÀ³æ¾­Ñé
-
----
-
-### ÏîÄ¿¾­Àú
-
-#### 2017/4-ÖÁ½ñ¡¡¡¡¡¡¡¡¡¡¡¡³µÃ¨ºÃ³µAppÏîÄ¿¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ ³µÃ¨»¥ÁªÍø½ðÈÚ·þÎñÓÐÏÞ¹«Ë¾
-
-##### ÏîÄ¿¼ò½é£º
-³µÃ¨ºÃ³µAppÊÇ¹«Ë¾µÄÖ÷Òª¶ÔÍâÍÆ¹ãµÄApp£¬Ö±½ÓÃæÏò¹«Ë¾µÄ¹ã´óÓÃ»§¡£ÏîÄ¿²ÉÓÃMVP¼Ü¹¹Ä£Ê½£¬±ãÓÚ¸ôÀëÍøÂçÇëÇóºÍÒ³Ãæ£¬ÀûÓÚºóÆÚÒ³ÃæµÄ²»¶ÏÓÅ»¯¸Ä½ø¡£¸ù¾ÝÒµÎñÂß¼­»®·Ö²»Í¬µÄÄ£¿é£¬Ê¹ÏîÄ¿½á¹¹¸ü¼ÓÇåÎú£¬±ãÓÚÎ¬»¤¡£¼¯³É¶à¸öµÚÈý·½·þÎñ£¬°üÀ¨ÍÆËÍÍ³¼ÆµÈ£¬±ãÓÚ²úÆ·ºÍÔËÓªµÄÍÆ¹ã¡£
-
-
-##### Ö°Ôð£º
-
-* ×÷ÎªºËÐÄµÄAndroid¿ª·¢ÈËÔ±£¬¸ºÔðAppµÄAndroid°æµÄºËÐÄ¿ª·¢¹¤×÷ÒÔ¼°ºóÐøµØµü´ú¿ª·¢¡£
-* Íê³ÉÏîÄ¿µÄ¼Ü¹¹Éè¼ÆºÍÄ£¿é»®·Ö
-* Íê³ÉÊ×Ò³¡¢ÏêÇéÒ³µÈÖ÷ÒªÒ³ÃæÄ£¿éµÄ¿ª·¢
-
-#### 2017/4-ÖÁ½ñ¡¡¡¡¡¡¡¡¡¡¡¡³µÃ¨ºÃ³µÒµÎñ°æ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ ³µÃ¨»¥ÁªÍø½ðÈÚ·þÎñÓÐÏÞ¹«Ë¾
-
-##### ÏîÄ¿¼ò½é£º
-³µÃ¨ºÃ³µÒµÎñ°æAppÊÇÎª¹«Ë¾µÄÒ»ÏßÒµÎñÔ±·þÎñµÄ£¬ÓÃÓÚÎªÒµÎñÔ±Ìá¹©¿ì½Ý·½±ãµÄÌá½»¿Í»§ÐÅÏ¢µÄÈë¿Ú£¬ÊÇ¹«Ë¾ÈÚ×Ê×âÁÞÈ«Á÷³ÌÏµÍ³µÄÒÆ¶¯¶ËÔØÌå¡£ÏîÄ¿Í¬Ñù²ÉÓÃÁËMVP¼Ü¹¹Ä£Ê½²¢¸ù¾ÝÒµÎñÂß¼­»®·Ö²»Í¬µÄÄ£¿é±ãÓÚÎ¬»¤¡£
-
-##### Ö°Ôð£º
-
-* ×÷ÎªºËÐÄ¿ª·¢ÈËÔ±£¬Íê³ÉÊ×Ò³¡¢²úÆ·Ñ¯¼ÛµÈÖ÷ÒªÄ£¿éµÄ¿ª·¢¹¤×÷£¬²¢¸ºÔðºóÐø°æ±¾µÄµü´úÓÅ»¯
-* Íê³ÉÏîÄ¿µÄ¼Ü¹¹Éè¼ÆºÍÄ£¿é»®·Ö
-
-#### 2017/4-ÖÁ½ñ¡¡¡¡¡¡¡¡¡¡¡¡·ÖÆÚ²âËãÎ¢ÐÅÐ¡³ÌÐò¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ ³µÃ¨»¥ÁªÍø½ðÈÚ·þÎñÓÐÏÞ¹«Ë¾
-
-##### ÏîÄ¿¼ò½é£º
-·ÖÆÚ²âËãÐ¡³ÌÐòÊÇ¹«Ë¾Îª¹ã´ó¿Í»§Ìá¹©µÄÒ»¸ö¼ÆËã·ÖÆÚ¹º³µ³É±¾µÄÊµÓÃ¹¤¾ß¡£Í¬Ê±Ò²ÊÇ¹«Ë¾ÒýÁ÷µÄÒ»¸öÈë¿Ú¡£
-
-
-##### Ö°Ôð£º
-
-* ×÷ÎªºËÐÄ¿ª·¢ÈËÔ±£¬Íê³É·ÖÆÚ²âËã¡¢³µ¼ÛÔ¤¹À¼°³µÐÍÑ¡ÔñµÈºËÐÄÄ£¿éµÄ¿ª·¢¹¤×÷
-
-#### 2015/9-2017/4¡¡¡¡¡¡¡¡¡¡¡¡¸£Àû¶àAppÏîÄ¿¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ º¼ÖÝ²Ê²¬ÍøÂç¿Æ¼¼ÓÐÏÞ¹«Ë¾
-
-##### ÏîÄ¿¼ò½é£º
-¸£Àû¶àÊÇ¹«Ë¾ºËÐÄ²úÆ·£¬Îª¹ã´óÓÃ»§Ìá¹©¸÷ÖÖ¸£ÀûºÍÉÌ¼ÒµÄÓÅ»ÝÐÅÏ¢¡£ÒÑ¾­ÉÏÏß¸÷´óÓ¦ÓÃÊÐ³¡¡£
-
-
-##### Ö°Ôð£º
-
-* ÎÒÖ÷Òª¸ºÔð±àÐ´ÁËÒ»Ð©ºËÐÄ¹¦ÄÜÄ£¿é£¬°üÀ¨ÓÃ»§ÖÐÐÄ¡¢ÉÌ¼ÒÁÐ±íµÈ£¬´ËÍâ»¹·â×°ÁË»î¶¯Ä£°å¡¢Ê±¼ä´¦Àí¡¢Êý¾Ý´¦ÀíµÈ¹¤¾ßÀà£¬ÏÔÖøÌáÉýÁË¿ª·¢µÄÐ§ÂÊºÍ´úÂëµÄÖÊÁ¿¡£
